@@ -49,8 +49,8 @@ export default function Pricing() {
           </div>
           
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4">
-              LEVE AGORA TUDO ISSO<br />COM 92% DE DESCONTO!
+            <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4 leading-tight">
+              LEVE TUDO ISSO COM<br />92% DE DESCONTO!
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
               Mais de 430 festas prontas para colocar nome, idade e vender hoje mesmo sem necessidade de criar do zero.
