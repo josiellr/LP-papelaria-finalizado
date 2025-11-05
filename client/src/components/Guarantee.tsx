@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { ShieldCheck } from "lucide-react";
 import guaranteeImage from "@assets/image_1762384190703.png";
 
 export default function Guarantee() {
@@ -9,11 +8,7 @@ export default function Guarantee() {
         <div className="max-w-4xl mx-auto">
           <Card className="border-2 border-primary/20 shadow-xl">
             <CardContent className="p-8 md:p-12 text-center">
-              <div className="inline-flex items-center justify-center w-20 h-20 md:w-24 md:h-24 rounded-full bg-primary/10 mb-6">
-                <ShieldCheck className="w-10 h-10 md:w-12 md:h-12 text-primary" />
-              </div>
-              
-              <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4">
+              <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-6">
                 GARANTIA DE 7 DIAS: SEU RISCO É ZERO
               </h2>
               
