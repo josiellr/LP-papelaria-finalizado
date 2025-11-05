@@ -1,37 +1,34 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, TrendingUp, X } from "lucide-react";
+import { TrendingUp } from "lucide-react";
 import DynamicDateBadge from "./DynamicDateBadge";
 
 const pricingTiers = [
   {
-    name: "Plano Básico",
+    name: "PACOTE BÁSICO",
     price: "R$10",
     originalTotal: "R$108,90",
     discount: "91%",
-    features: [
-      { text: "Kit de Papelaria Lucrativa (+430 festas prontas)", included: true, price: "R$59,00" },
-      { text: "Pacote de temas e moldes limpos", included: true, price: "R$49,90" },
-      { text: "Curso Express – Canva do Zero ao Lucro", included: false, price: "R$29,00" },
-      { text: "Planner de vendas de papelaria", included: false, price: "R$19,00" },
-      { text: "Pacote de mensagens e modelos de divulgação", included: false, price: "R$15,00" }
+    deliverables: [
+      { text: "Kit de Papelaria Lucrativa (+430 festas prontas)", price: "R$59,00" },
+      { text: "Pacote de temas e moldes limpos", price: "R$49,90" }
     ],
     buttonText: "COMEÇAR AGORA - R$10",
     isPopular: false,
     checkoutLink: "#" // todo: remove mock functionality - add real checkout link
   },
   {
-    name: "Plano Premium",
+    name: "PACOTE PREMIUM",
     price: "R$27",
     originalTotal: "R$171,90",
     discount: "84%",
-    features: [
-      { text: "Kit de Papelaria Lucrativa (+430 festas prontas)", included: true, price: "R$59,00" },
-      { text: "Pacote de temas e moldes limpos", included: true, price: "R$49,90" },
-      { text: "Curso Express – Canva do Zero ao Lucro", included: true, price: "R$29,00" },
-      { text: "Planner de vendas de papelaria", included: true, price: "R$19,00" },
-      { text: "Pacote de mensagens e modelos de divulgação", included: true, price: "R$15,00" }
+    deliverables: [
+      { text: "Kit de Papelaria Lucrativa (+430 festas prontas)", price: "R$59,00" },
+      { text: "Pacote de temas e moldes limpos", price: "R$49,90" },
+      { text: "Curso Express – Canva do Zero ao Lucro", price: "R$29,00" },
+      { text: "Planner de vendas de papelaria", price: "R$19,00" },
+      { text: "Pacote de mensagens e modelos de divulgação", price: "R$15,00" }
     ],
     buttonText: "QUERO O PLANO PREMIUM - R$27",
     isPopular: true,
@@ -78,75 +75,64 @@ export default function Pricing() {
                   </div>
                 )}
                 
-                <CardHeader className="text-center pb-4">
-                  <h3 className="font-heading font-bold text-2xl md:text-3xl mb-2">
+                <CardHeader className="text-center pb-4 space-y-3">
+                  <h3 className="font-heading font-bold text-2xl md:text-3xl">
                     {tier.name}
                   </h3>
                   
-                  {tier.socialProof && (
-                    <p className="text-xs md:text-sm text-muted-foreground italic">
-                      {tier.socialProof}
-                    </p>
-                  )}
+                  <Badge variant="secondary" className="font-semibold text-sm px-4 py-2">
+                    Oferta especial por tempo limitado
+                  </Badge>
                 </CardHeader>
                 
                 <CardContent className="space-y-6">
-                  <div className="text-center py-6 bg-card rounded-md">
-                    <p className="text-sm text-muted-foreground mb-1">De:</p>
-                    <p className="text-2xl line-through text-muted-foreground mb-2">
-                      {tier.originalTotal}
-                    </p>
-                    <p className="text-sm text-muted-foreground mb-3">POR UM PAGAMENTO ÚNICO:</p>
-                    <p className="font-heading font-bold text-5xl md:text-6xl text-primary mb-2">
-                      {tier.price}
-                    </p>
-                    <Badge variant="secondary" className="font-bold">
-                      {tier.discount} DE DESCONTO
-                    </Badge>
-                  </div>
-                  
                   <div className="space-y-3">
-                    {tier.features.map((feature, i) => (
-                      <div key={i} className="flex items-start gap-3 justify-between">
-                        <div className="flex items-start gap-3 flex-1">
-                          {feature.included ? (
-                            <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                          ) : (
-                            <X className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                          )}
-                          <p className={`text-sm md:text-base ${!feature.included ? 'text-muted-foreground' : ''}`}>
-                            {feature.text}
-                          </p>
-                        </div>
-                        <span className="text-sm md:text-base font-bold text-red-500 line-through flex-shrink-0 ml-2">
-                          {feature.price}
+                    {tier.deliverables.map((deliverable, i) => (
+                      <div key={i} className="flex items-start justify-between gap-3 pb-3 border-b last:border-b-0">
+                        <p className="text-sm md:text-base flex-1">
+                          {deliverable.text}
+                        </p>
+                        <span className="text-sm md:text-base font-bold text-red-500 line-through flex-shrink-0">
+                          {deliverable.price}
                         </span>
                       </div>
                     ))}
+                  </div>
+                  
+                  <div className="text-center py-6 bg-muted/30 rounded-md space-y-3">
+                    <div>
+                      <p className="text-sm text-muted-foreground mb-1">De:</p>
+                      <p className="text-2xl line-through text-muted-foreground">
+                        {tier.originalTotal}
+                      </p>
+                    </div>
                     
-                    <div className="pt-4 mt-4 border-t-2 border-dashed">
-                      <div className="flex justify-between items-center">
-                        <span className="font-heading font-bold text-lg md:text-xl">
-                          Valor Total:
-                        </span>
-                        <span className="font-heading font-bold text-xl md:text-2xl text-red-500 line-through">
-                          {tier.originalTotal}
-                        </span>
-                      </div>
+                    <div>
+                      <p className="text-sm text-muted-foreground mb-2">POR UM PAGAMENTO ÚNICO:</p>
+                      <p className="font-heading font-bold text-5xl md:text-6xl text-primary mb-2">
+                        {tier.price}
+                      </p>
+                      <Badge variant="secondary" className="font-bold">
+                        {tier.discount} DE DESCONTO
+                      </Badge>
                     </div>
                   </div>
                   
                   <Button
                     asChild
-                    className={`w-full font-heading font-bold text-base md:text-lg py-6 md:py-7 ${
-                      tier.isPopular 
-                        ? 'bg-primary hover:bg-primary/90 text-primary-foreground' 
-                        : 'bg-secondary hover:bg-secondary/90 text-secondary-foreground'
-                    }`}
+                    variant={tier.isPopular ? "default" : "secondary"}
+                    size="lg"
+                    className="w-full font-heading font-bold text-base md:text-lg py-6 md:py-7"
                     data-testid={`button-checkout-${index}`}
                   >
                     <a href={tier.checkoutLink}>{tier.buttonText}</a>
                   </Button>
+                  
+                  {tier.socialProof && (
+                    <p className="text-xs text-center text-muted-foreground italic">
+                      {tier.socialProof}
+                    </p>
+                  )}
                   
                   <p className="text-xs text-center text-muted-foreground">
                     Compra segura com certificados de segurança.
