@@ -2,7 +2,6 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, TrendingUp } from "lucide-react";
-import { useState } from "react";
 import DynamicDateBadge from "./DynamicDateBadge";
 
 const pricingTiers = [
@@ -41,13 +40,6 @@ const pricingTiers = [
 ];
 
 export default function Pricing() {
-  const [hoveredTier, setHoveredTier] = useState<number | null>(null);
-  
-  const handleCheckout = (tierName: string, link: string) => {
-    console.log(`Checkout clicked for ${tierName}`, link);
-    // todo: remove mock functionality - navigate to actual checkout
-  };
-  
   return (
     <section id="offers" className="py-16 md:py-24 bg-gradient-to-b from-background to-primary/5">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
@@ -74,8 +66,6 @@ export default function Pricing() {
                     ? 'border-4 border-primary shadow-2xl scale-105' 
                     : 'hover-elevate'
                 }`}
-                onMouseEnter={() => setHoveredTier(index)}
-                onMouseLeave={() => setHoveredTier(null)}
                 data-testid={`card-pricing-${index}`}
               >
                 {tier.isPopular && (
@@ -124,7 +114,7 @@ export default function Pricing() {
                   </div>
                   
                   <Button
-                    onClick={() => handleCheckout(tier.name, tier.checkoutLink)}
+                    asChild
                     className={`w-full font-heading font-bold text-base md:text-lg py-6 md:py-7 ${
                       tier.isPopular 
                         ? 'bg-primary hover:bg-primary/90 text-primary-foreground' 
@@ -132,7 +122,7 @@ export default function Pricing() {
                     }`}
                     data-testid={`button-checkout-${index}`}
                   >
-                    {tier.buttonText}
+                    <a href={tier.checkoutLink}>{tier.buttonText}</a>
                   </Button>
                   
                   <p className="text-xs text-center text-muted-foreground">

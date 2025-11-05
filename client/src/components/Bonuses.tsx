@@ -56,7 +56,7 @@ export default function Bonuses() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4">
-              3 BÔNUS IRRESISTÍVEL
+              4 BÔNUS IRRESISTÍVEIS
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground">
               Vendemos separado, mas nessa página você leva de graça!

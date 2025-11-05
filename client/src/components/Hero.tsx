@@ -1,6 +1,7 @@
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@assets/generated_images/Festive_party_celebration_hero_549b0c91.png";
+import mockupImage from "@assets/mockup-exemplo.webp";
 
 export default function Hero() {
   const scrollToOffers = () => {
@@ -26,9 +27,18 @@ export default function Hero() {
             O KIT DE FESTAS LUCRATIVAS
           </h1>
           
-          <p className="text-lg md:text-xl lg:text-2xl mb-6 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed max-w-3xl mx-auto">
             +430 moldes prontos para adicionar o nome, idade do aniversariante e vender na sua cidade ou online. Funciona até mesmo para quem nunca mexeu com papelaria personalizada antes!
           </p>
+          
+          <div className="mb-8 flex justify-center">
+            <img 
+              src={mockupImage} 
+              alt="Mockup do Kit de Festas Lucrativas mostrando exemplos de moldes" 
+              className="w-full max-w-xs md:max-w-sm rounded-lg shadow-2xl"
+              data-testid="img-mockup"
+            />
+          </div>
           
           <div className="flex items-center justify-center gap-2 mb-6">
             <div className="flex gap-1">
