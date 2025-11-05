@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { CheckCircle, TrendingUp } from "lucide-react";
+import { CheckCircle, TrendingUp, X } from "lucide-react";
 import DynamicDateBadge from "./DynamicDateBadge";
 
 const pricingTiers = [
@@ -11,10 +11,11 @@ const pricingTiers = [
     originalTotal: "R$171,90",
     discount: "94%",
     features: [
-      "Kit de Papelaria Lucrativa (+430 festas prontas)",
-      "Curso Express – Canva do Zero ao Lucro",
-      "Planner de vendas de papelaria",
-      "Pacote de mensagens e modelos de divulgação"
+      { text: "Kit de Papelaria Lucrativa (+430 festas prontas)", included: true },
+      { text: "Pacote de temas e moldes limpos", included: true },
+      { text: "Curso Express – Canva do Zero ao Lucro", included: false },
+      { text: "Planner de vendas de papelaria", included: false },
+      { text: "Pacote de mensagens e modelos de divulgação", included: false }
     ],
     buttonText: "COMEÇAR AGORA - R$10",
     isPopular: false,
@@ -22,17 +23,17 @@ const pricingTiers = [
   },
   {
     name: "Plano Premium",
-    price: "R$20",
+    price: "R$27",
     originalTotal: "R$221,80",
-    discount: "91%",
+    discount: "88%",
     features: [
-      "Kit de Papelaria Lucrativa (+430 festas prontas)",
-      "Curso Express – Canva do Zero ao Lucro",
-      "Planner de vendas de papelaria",
-      "Pacote de mensagens e modelos de divulgação",
-      "Pacote de temas e moldes limpos (R$49,90)"
+      { text: "Kit de Papelaria Lucrativa (+430 festas prontas)", included: true },
+      { text: "Pacote de temas e moldes limpos", included: true },
+      { text: "Curso Express – Canva do Zero ao Lucro", included: true },
+      { text: "Planner de vendas de papelaria", included: true },
+      { text: "Pacote de mensagens e modelos de divulgação", included: true }
     ],
-    buttonText: "QUERO O PLANO PREMIUM - R$20",
+    buttonText: "QUERO O PLANO PREMIUM - R$27",
     isPopular: true,
     checkoutLink: "#", // todo: remove mock functionality - add real checkout link
     socialProof: "Comprado por mais de 743 pessoas nos últimos dias"
@@ -107,8 +108,14 @@ export default function Pricing() {
                   <div className="space-y-3">
                     {tier.features.map((feature, i) => (
                       <div key={i} className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        <p className="text-sm md:text-base">{feature}</p>
+                        {feature.included ? (
+                          <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                        ) : (
+                          <X className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                        )}
+                        <p className={`text-sm md:text-base ${!feature.included ? 'text-muted-foreground' : ''}`}>
+                          {feature.text}
+                        </p>
                       </div>
                     ))}
                   </div>
