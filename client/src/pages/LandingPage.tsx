@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import HeadlineSection from "@/components/HeadlineSection";
+import InfiniteScroll from "@/components/InfiniteScroll";
 import WhatYouGet from "@/components/WhatYouGet";
 import HowItWorks from "@/components/HowItWorks";
 import IdealFor from "@/components/IdealFor";
@@ -16,6 +17,7 @@ export default function LandingPage() {
     <div className="min-h-screen">
       <Hero />
       <HeadlineSection />
+      <InfiniteScroll />
       <WhatYouGet />
       <HowItWorks />
       <IdealFor />
