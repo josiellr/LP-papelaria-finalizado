@@ -78,7 +78,7 @@ export default function Pricing() {
                   </div>
                 )}
                 
-                <CardHeader className="text-center pb-4 space-y-3">
+                <CardHeader className={`text-center pb-4 space-y-3 ${tier.isPopular ? 'pt-8' : ''}`}>
                   <h3 className="font-heading font-bold text-2xl md:text-3xl">
                     {tier.name}
                   </h3>
