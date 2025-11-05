@@ -47,9 +47,12 @@ export default function Testimonials() {
               <Card key={index} className="hover-elevate transition-all duration-300" data-testid={`card-testimonial-${index}`}>
                 <CardContent className="p-6 md:p-8">
                   <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center font-heading font-bold text-primary">
-                      {testimonial.initials}
-                    </div>
+                    <Avatar className="w-12 h-12">
+                      {testimonial.image && <AvatarImage src={testimonial.image} alt={testimonial.name} />}
+                      <AvatarFallback className="bg-primary/10 font-heading font-bold text-primary">
+                        {testimonial.initials}
+                      </AvatarFallback>
+                    </Avatar>
                     <div>
                       <p className="font-semibold">{testimonial.name}</p>
                       <p className="text-sm text-muted-foreground">{testimonial.location}</p>
