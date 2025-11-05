@@ -14,7 +14,7 @@ export default function Guarantee() {
               </div>
               
               <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-6">
-                GARANTIA DE 7 DIAS: SEU RISCO É ZERO
+                GARANTIA DE 15 DIAS: SEU RISCO É ZERO
               </h2>
               
               <div className="mb-6 flex justify-center">
@@ -28,7 +28,7 @@ export default function Guarantee() {
               
               <div className="space-y-4 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
                 <p>
-                  Sua satisfação é <span className="font-bold text-foreground">100% garantida</span>. Você tem <span className="font-bold text-foreground">7 dias inteiros</span> para acessar todos os materiais, testar os modelos e comprovar o potencial de ganhos.
+                  Sua satisfação é <span className="font-bold text-foreground">100% garantida</span>. Você tem <span className="font-bold text-foreground">15 dias inteiros</span> para acessar todos os materiais, testar os modelos e comprovar o potencial de ganhos.
                 </p>
                 
                 <p>
