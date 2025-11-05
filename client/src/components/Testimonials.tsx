@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Star } from "lucide-react";
 
 // todo: remove mock functionality - replace with real testimonials
@@ -8,7 +9,8 @@ const testimonials = [
     location: "São Paulo, SP",
     rating: 5,
     text: "Comecei há 2 meses e já fiz mais de R$3.000! Os moldes são lindos e super fáceis de editar.",
-    initials: "MS"
+    initials: "MS",
+    image: "https://i.ibb.co/Rpvst2m/image-1762384554262.png"
   },
   {
     name: "Ana Costa",
