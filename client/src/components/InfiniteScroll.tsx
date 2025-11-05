@@ -1,17 +1,17 @@
 const imageLinks = [
-  "", // Adicione o link da imagem 1 aqui
-  "", // Adicione o link da imagem 2 aqui
-  "", // Adicione o link da imagem 3 aqui
-  "", // Adicione o link da imagem 4 aqui
-  "", // Adicione o link da imagem 5 aqui
-  "", // Adicione o link da imagem 6 aqui
-  "", // Adicione o link da imagem 7 aqui
-  "", // Adicione o link da imagem 8 aqui
-  "", // Adicione o link da imagem 9 aqui
-  "", // Adicione o link da imagem 10 aqui
-  "", // Adicione o link da imagem 11 aqui
-  "", // Adicione o link da imagem 12 aqui
-  "", // Adicione o link da imagem 13 aqui
+  "https://i.ibb.co/wbtJpJT/image.png",
+  "https://i.ibb.co/4ZtcxyV/image.png",
+  "https://i.ibb.co/cS8sP5z/image.png",
+  "https://i.ibb.co/GgkTqx5/image.png",
+  "https://i.ibb.co/PZTYnjm/image.png",
+  "https://i.ibb.co/3yTf7V4/image.png",
+  "https://i.ibb.co/mrqFD0f/image.png",
+  "https://i.ibb.co/nMzXmP9/image.png",
+  "https://i.ibb.co/F4DdQQX/image.png",
+  "https://i.ibb.co/7tzyHCH/image.png",
+  "https://i.ibb.co/2Y7kPjr/image.png",
+  "https://i.ibb.co/Wpn5gXD/image.png",
+  "https://i.ibb.co/B27r1WF/image.png",
 ];
 
 export default function InfiniteScroll() {
