@@ -8,14 +8,14 @@ const pricingTiers = [
   {
     name: "Plano Básico",
     price: "R$10",
-    originalTotal: "R$171,90",
-    discount: "94%",
+    originalTotal: "R$108,90",
+    discount: "91%",
     features: [
-      { text: "Kit de Papelaria Lucrativa (+430 festas prontas)", included: true },
-      { text: "Pacote de temas e moldes limpos", included: true },
-      { text: "Curso Express – Canva do Zero ao Lucro", included: false },
-      { text: "Planner de vendas de papelaria", included: false },
-      { text: "Pacote de mensagens e modelos de divulgação", included: false }
+      { text: "Kit de Papelaria Lucrativa (+430 festas prontas)", included: true, price: "R$59,00" },
+      { text: "Pacote de temas e moldes limpos", included: true, price: "R$49,90" },
+      { text: "Curso Express – Canva do Zero ao Lucro", included: false, price: "R$29,00" },
+      { text: "Planner de vendas de papelaria", included: false, price: "R$19,00" },
+      { text: "Pacote de mensagens e modelos de divulgação", included: false, price: "R$15,00" }
     ],
     buttonText: "COMEÇAR AGORA - R$10",
     isPopular: false,
@@ -24,14 +24,14 @@ const pricingTiers = [
   {
     name: "Plano Premium",
     price: "R$27",
-    originalTotal: "R$221,80",
-    discount: "88%",
+    originalTotal: "R$171,90",
+    discount: "84%",
     features: [
-      { text: "Kit de Papelaria Lucrativa (+430 festas prontas)", included: true },
-      { text: "Pacote de temas e moldes limpos", included: true },
-      { text: "Curso Express – Canva do Zero ao Lucro", included: true },
-      { text: "Planner de vendas de papelaria", included: true },
-      { text: "Pacote de mensagens e modelos de divulgação", included: true }
+      { text: "Kit de Papelaria Lucrativa (+430 festas prontas)", included: true, price: "R$59,00" },
+      { text: "Pacote de temas e moldes limpos", included: true, price: "R$49,90" },
+      { text: "Curso Express – Canva do Zero ao Lucro", included: true, price: "R$29,00" },
+      { text: "Planner de vendas de papelaria", included: true, price: "R$19,00" },
+      { text: "Pacote de mensagens e modelos de divulgação", included: true, price: "R$15,00" }
     ],
     buttonText: "QUERO O PLANO PREMIUM - R$27",
     isPopular: true,
@@ -107,17 +107,33 @@ export default function Pricing() {
                   
                   <div className="space-y-3">
                     {tier.features.map((feature, i) => (
-                      <div key={i} className="flex items-start gap-3">
-                        {feature.included ? (
-                          <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
-                        ) : (
-                          <X className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
-                        )}
-                        <p className={`text-sm md:text-base ${!feature.included ? 'text-muted-foreground' : ''}`}>
-                          {feature.text}
-                        </p>
+                      <div key={i} className="flex items-start gap-3 justify-between">
+                        <div className="flex items-start gap-3 flex-1">
+                          {feature.included ? (
+                            <CheckCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                          ) : (
+                            <X className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                          )}
+                          <p className={`text-sm md:text-base ${!feature.included ? 'text-muted-foreground' : ''}`}>
+                            {feature.text}
+                          </p>
+                        </div>
+                        <span className="text-sm md:text-base font-bold text-red-500 line-through flex-shrink-0 ml-2">
+                          {feature.price}
+                        </span>
                       </div>
                     ))}
+                    
+                    <div className="pt-4 mt-4 border-t-2 border-dashed">
+                      <div className="flex justify-between items-center">
+                        <span className="font-heading font-bold text-lg md:text-xl">
+                          Valor Total:
+                        </span>
+                        <span className="font-heading font-bold text-xl md:text-2xl text-red-500 line-through">
+                          {tier.originalTotal}
+                        </span>
+                      </div>
+                    </div>
                   </div>
                   
                   <Button
