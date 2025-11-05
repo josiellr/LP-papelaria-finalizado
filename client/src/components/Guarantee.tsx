@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { ShieldCheck } from "lucide-react";
+import guaranteeImage from "@assets/image_1762384190703.png";
 
 export default function Guarantee() {
   return (
@@ -15,6 +16,15 @@ export default function Guarantee() {
               <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4">
                 GARANTIA DE 7 DIAS: SEU RISCO É ZERO
               </h2>
+              
+              <div className="mb-6 flex justify-center">
+                <img 
+                  src={guaranteeImage} 
+                  alt="Garantia de 7 dias com seu risco zero" 
+                  className="w-full max-w-[200px] md:max-w-[250px] rounded-lg"
+                  data-testid="img-guarantee"
+                />
+              </div>
               
               <div className="space-y-4 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
                 <p>
