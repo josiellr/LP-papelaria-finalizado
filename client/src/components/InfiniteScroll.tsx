@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const imageLinks = [
   "", // Adicione o link da imagem 1 aqui
@@ -18,37 +18,99 @@ const imageLinks = [
 
 export default function InfiniteScroll() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const [isPaused, setIsPaused] = useState(false);
+  const pauseTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
     if (!scrollContainer) return;
 
-    let scrollAmount = 0;
+    let scrollAmount = scrollContainer.scrollLeft;
     const scrollSpeed = 1;
+    let animationId: number;
 
     const scroll = () => {
-      scrollAmount += scrollSpeed;
-      
-      if (scrollAmount >= scrollContainer.scrollWidth / 2) {
-        scrollAmount = 0;
+      if (!isPaused && scrollContainer) {
+        scrollAmount += scrollSpeed;
+        
+        if (scrollAmount >= scrollContainer.scrollWidth / 2) {
+          scrollAmount = 0;
+        }
+        
+        scrollContainer.scrollLeft = scrollAmount;
       }
-      
-      scrollContainer.scrollLeft = scrollAmount;
-      requestAnimationFrame(scroll);
+      animationId = requestAnimationFrame(scroll);
     };
 
-    const animationId = requestAnimationFrame(scroll);
+    animationId = requestAnimationFrame(scroll);
 
-    return () => cancelAnimationFrame(animationId);
-  }, []);
+    const handleMouseEnter = () => {
+      setIsPaused(true);
+      if (pauseTimeoutRef.current) {
+        clearTimeout(pauseTimeoutRef.current);
+      }
+    };
+
+    const handleMouseLeave = () => {
+      pauseTimeoutRef.current = setTimeout(() => {
+        setIsPaused(false);
+      }, 500);
+    };
+
+    const handleTouchStart = () => {
+      setIsPaused(true);
+      if (pauseTimeoutRef.current) {
+        clearTimeout(pauseTimeoutRef.current);
+      }
+    };
+
+    const handleTouchEnd = () => {
+      pauseTimeoutRef.current = setTimeout(() => {
+        setIsPaused(false);
+      }, 1000);
+    };
+
+    const handleScroll = () => {
+      scrollAmount = scrollContainer.scrollLeft;
+      setIsPaused(true);
+      if (pauseTimeoutRef.current) {
+        clearTimeout(pauseTimeoutRef.current);
+      }
+      pauseTimeoutRef.current = setTimeout(() => {
+        setIsPaused(false);
+      }, 1500);
+    };
+
+    scrollContainer.addEventListener('mouseenter', handleMouseEnter);
+    scrollContainer.addEventListener('mouseleave', handleMouseLeave);
+    scrollContainer.addEventListener('touchstart', handleTouchStart);
+    scrollContainer.addEventListener('touchend', handleTouchEnd);
+    scrollContainer.addEventListener('scroll', handleScroll);
+
+    return () => {
+      cancelAnimationFrame(animationId);
+      if (pauseTimeoutRef.current) {
+        clearTimeout(pauseTimeoutRef.current);
+      }
+      scrollContainer.removeEventListener('mouseenter', handleMouseEnter);
+      scrollContainer.removeEventListener('mouseleave', handleMouseLeave);
+      scrollContainer.removeEventListener('touchstart', handleTouchStart);
+      scrollContainer.removeEventListener('touchend', handleTouchEnd);
+      scrollContainer.removeEventListener('scroll', handleScroll);
+    };
+  }, [isPaused]);
 
   return (
     <section className="py-12 md:py-16 bg-background overflow-hidden">
       <div className="relative">
         <div
           ref={scrollRef}
-          className="flex gap-4 md:gap-6 overflow-x-hidden scroll-smooth"
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          className="flex gap-4 md:gap-6 overflow-x-auto scroll-smooth cursor-grab active:cursor-grabbing"
+          style={{ 
+            scrollbarWidth: 'none', 
+            msOverflowStyle: 'none',
+            WebkitOverflowScrolling: 'touch'
+          }}
           data-testid="infinite-scroll-container"
         >
           {imageLinks.map((imgLink, index) => (
