@@ -11,8 +11,11 @@ const pricingTiers = [
     originalTotal: "R$108,90",
     discount: "91%",
     deliverables: [
-      { text: "Kit de Papelaria Lucrativa (+430 festas prontas)", price: "R$59,00" },
-      { text: "Pacote de temas e moldes limpos", price: "R$49,90" }
+      { text: "Kit de Papelaria Lucrativa (+430 festas prontas)", price: "R$59,00", included: true },
+      { text: "Pacote de temas e moldes limpos", price: "R$49,90", included: true },
+      { text: "Curso Express – Canva do Zero ao Lucro", price: "R$29,00", included: false },
+      { text: "Planner de vendas de papelaria", price: "R$19,00", included: false },
+      { text: "Pacote de mensagens e modelos de divulgação", price: "R$15,00", included: false }
     ],
     buttonText: "COMEÇAR AGORA - R$10",
     isPopular: false,
@@ -24,11 +27,11 @@ const pricingTiers = [
     originalTotal: "R$171,90",
     discount: "84%",
     deliverables: [
-      { text: "Kit de Papelaria Lucrativa (+430 festas prontas)", price: "R$59,00" },
-      { text: "Pacote de temas e moldes limpos", price: "R$49,90" },
-      { text: "Curso Express – Canva do Zero ao Lucro", price: "R$29,00" },
-      { text: "Planner de vendas de papelaria", price: "R$19,00" },
-      { text: "Pacote de mensagens e modelos de divulgação", price: "R$15,00" }
+      { text: "Kit de Papelaria Lucrativa (+430 festas prontas)", price: "R$59,00", included: true },
+      { text: "Pacote de temas e moldes limpos", price: "R$49,90", included: true },
+      { text: "Curso Express – Canva do Zero ao Lucro", price: "R$29,00", included: true },
+      { text: "Planner de vendas de papelaria", price: "R$19,00", included: true },
+      { text: "Pacote de mensagens e modelos de divulgação", price: "R$15,00", included: true }
     ],
     buttonText: "QUERO O PLANO PREMIUM - R$27",
     isPopular: true,
@@ -88,7 +91,7 @@ export default function Pricing() {
                 <CardContent className="space-y-6">
                   <div className="space-y-3">
                     {tier.deliverables.map((deliverable, i) => (
-                      <div key={i} className="flex items-start justify-between gap-3 pb-3 border-b last:border-b-0">
+                      <div key={i} className={`flex items-start justify-between gap-3 pb-3 border-b last:border-b-0 ${!deliverable.included ? 'opacity-50' : ''}`}>
                         <p className="text-sm md:text-base flex-1">
                           {deliverable.text}
                         </p>
