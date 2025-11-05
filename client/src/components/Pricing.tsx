@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { TrendingUp } from "lucide-react";
+import { TrendingUp, CheckCircle, X } from "lucide-react";
 import DynamicDateBadge from "./DynamicDateBadge";
 
 const pricingTiers = [
@@ -91,13 +91,20 @@ export default function Pricing() {
                 <CardContent className="space-y-6">
                   <div className="space-y-3">
                     {tier.deliverables.map((deliverable, i) => (
-                      <div key={i} className={`flex items-start justify-between gap-3 pb-3 border-b last:border-b-0 ${!deliverable.included ? 'opacity-50' : ''}`}>
-                        <p className="text-sm md:text-base flex-1">
-                          {deliverable.text}
-                        </p>
-                        <span className="text-sm md:text-base font-bold text-red-500 line-through flex-shrink-0">
-                          {deliverable.price}
-                        </span>
+                      <div key={i} className={`flex items-start gap-3 pb-3 border-b last:border-b-0 ${!deliverable.included ? 'opacity-50' : ''}`}>
+                        {deliverable.included ? (
+                          <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-500 flex-shrink-0 mt-0.5" />
+                        ) : (
+                          <X className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
+                        )}
+                        <div className="flex items-start justify-between gap-3 flex-1">
+                          <p className="text-sm md:text-base flex-1">
+                            {deliverable.text}
+                          </p>
+                          <span className="text-sm md:text-base font-bold text-red-500 line-through flex-shrink-0">
+                            {deliverable.price}
+                          </span>
+                        </div>
                       </div>
                     ))}
                   </div>
