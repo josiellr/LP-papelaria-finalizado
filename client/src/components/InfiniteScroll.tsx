@@ -2,7 +2,7 @@ const imageLinks = [
   "https://i.ibb.co/PbkT1TR/1-3.webp",
   "https://i.ibb.co/7JCHFc1H/4-2.webp",
   "https://i.ibb.co/Q3HxZBsn/7.webp",
-  "",
+  "https://i.ibb.co/TzRLsvg/2-3.webp",
   "",
   "",
   "",
