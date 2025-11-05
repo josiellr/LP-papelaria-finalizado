@@ -70,7 +70,7 @@ export default function Pricing() {
                 data-testid={`card-pricing-${index}`}
               >
                 {tier.isPopular && (
-                  <div className="absolute -top-5 left-1/2 -translate-x-1/2 z-10">
+                  <div className="absolute -top-7 left-1/2 -translate-x-1/2 z-10">
                     <Badge className="bg-accent text-accent-foreground font-bold px-8 py-3 text-base shadow-xl border-2 border-accent-foreground/20">
                       <TrendingUp className="w-5 h-5 mr-2 inline" />
                       MAIS VENDIDO
