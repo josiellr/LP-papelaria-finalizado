@@ -16,7 +16,7 @@ const imageLinks = [
 
 export default function InfiniteScroll() {
   return (
-    <section className="py-12 md:py-16 bg-background overflow-hidden">
+    <section className="pt-4 pb-12 md:pt-6 md:pb-16 bg-background overflow-hidden">
       <style>
         {`
           @keyframes scroll {
