@@ -1,6 +1,9 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Star } from "lucide-react";
+import mariaImg from "@assets/image_1762384554262.png";
+import anaImg from "@assets/image_1762384246146.png";
+import julianaImg from "@assets/image_1762384190703.png";
 
 // todo: remove mock functionality - replace with real testimonials
 const testimonials = [
@@ -10,21 +13,23 @@ const testimonials = [
     rating: 5,
     text: "Comecei há 2 meses e já fiz mais de R$3.000! Os moldes são lindos e super fáceis de editar.",
     initials: "MS",
-    image: "https://i.ibb.co/Rpvst2m/image-1762384554262.png"
+    image: mariaImg
   },
   {
     name: "Ana Costa",
     location: "Rio de Janeiro, RJ",
     rating: 5,
     text: "Nunca tinha mexido com papelaria e consegui fazer minha primeira venda no mesmo dia que comprei!",
-    initials: "AC"
+    initials: "AC",
+    image: anaImg
   },
   {
     name: "Juliana Santos",
     location: "Belo Horizonte, MG",
     rating: 5,
     text: "O curso de Canva foi essencial. Agora faço festas personalizadas que vendem muito bem!",
-    initials: "JS"
+    initials: "JS",
+    image: julianaImg
   }
 ];
 
