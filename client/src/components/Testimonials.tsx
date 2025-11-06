@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Star } from "lucide-react";
-import mariaImg from "@assets/image_1762384554262.png";
+import mariaImg from "@assets/image_1762387226168.png";
 import anaImg from "@assets/image_1762384246146.png";
 import julianaImg from "@assets/image_1762384190703.png";
 
