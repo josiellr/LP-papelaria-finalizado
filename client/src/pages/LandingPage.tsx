@@ -11,6 +11,7 @@ import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
+import SalesNotification from "@/components/SalesNotification";
 
 export default function LandingPage() {
   return (
@@ -28,6 +29,7 @@ export default function LandingPage() {
       <FAQ />
       <FinalCTA />
       <Footer />
+      <SalesNotification />
     </div>
   );
 }
