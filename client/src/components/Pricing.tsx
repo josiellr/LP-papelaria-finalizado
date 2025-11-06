@@ -19,7 +19,7 @@ const pricingTiers = [
     ],
     buttonText: "COMEÇAR AGORA - R$10",
     isPopular: false,
-    checkoutLink: "#" // todo: remove mock functionality - add real checkout link
+    checkoutLink: "https://pay.kiwify.com.br/6P8i9Ja"
   },
   {
     name: "PACOTE PREMIUM",
