@@ -20,7 +20,7 @@ export default function Hero() {
       <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 py-16 md:py-24">
         <div className="max-w-4xl mx-auto text-center text-white">
           <div className="inline-block mb-4">
-            <p className="text-base md:text-lg lg:text-xl font-medium tracking-wide uppercase">BAIXE AGORA:</p>
+            <p className="text-xl md:text-2xl lg:text-3xl font-bold tracking-wide uppercase">BAIXE AGORA:</p>
           </div>
           
           <h1 className="font-heading font-bold text-4xl md:text-6xl lg:text-7xl mb-4 leading-tight">
