@@ -35,7 +35,7 @@ const pricingTiers = [
     ],
     buttonText: "QUERO O PLANO PREMIUM - R$27",
     isPopular: true,
-    checkoutLink: "#", // todo: remove mock functionality - add real checkout link
+    checkoutLink: "https://pay.kiwify.com.br/1VDREq9",
     socialProof: "Comprado por mais de 743 pessoas nos últimos dias"
   }
 ];
