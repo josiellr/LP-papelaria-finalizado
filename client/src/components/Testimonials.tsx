@@ -3,7 +3,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Star } from "lucide-react";
 import mariaImg from "@assets/image_1762387226168.png";
 import anaImg from "@assets/image_1762387291527.png";
-import julianaImg from "@assets/image_1762384190703.png";
+import julianaImg from "@assets/image_1762387337948.png";
 
 // todo: remove mock functionality - replace with real testimonials
 const testimonials = [
