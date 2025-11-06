@@ -151,12 +151,6 @@ export default function Pricing() {
               </Card>
             ))}
           </div>
-          
-          <div className="text-center">
-            <p className="text-sm md:text-base text-muted-foreground italic">
-              * Os botões acima são personalizáveis. Adicione seus links de checkout posteriormente.
-            </p>
-          </div>
         </div>
       </div>
     </section>
