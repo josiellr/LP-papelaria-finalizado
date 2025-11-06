@@ -118,7 +118,7 @@ export default function SalesNotification() {
 
   return (
     <div 
-      className="fixed bottom-6 left-6 z-50 animate-in slide-in-from-bottom-5 duration-500"
+      className="fixed top-6 right-6 z-50 animate-in slide-in-from-right-5 duration-500"
       data-testid="notification-sale"
     >
       <Card className="p-4 shadow-2xl border-2 border-green-500/20 bg-card max-w-sm">
