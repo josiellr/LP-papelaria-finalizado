@@ -4,7 +4,7 @@ import guaranteeBadge from "@assets/image_1762384554262.png";
 
 export default function Guarantee() {
   return (
-    <section className="py-16 md:py-24 bg-background">
+    <section className="py-16 md:py-24 bg-gradient-to-b from-background via-primary/5 to-background">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <Card className="border-2 border-primary/20 shadow-xl">
