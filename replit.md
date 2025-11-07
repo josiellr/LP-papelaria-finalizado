@@ -65,6 +65,7 @@ Preferred communication style: Simple, everyday language.
 - Development: tsx for TypeScript execution with hot reload
 - Production: esbuild for server bundling, Vite for client assets
 - Static file serving in production mode
+- **Netlify Ready**: Configured for static deployment with `netlify.toml` (see DEPLOY_NETLIFY.md for instructions)
 
 ### Project Structure
 
