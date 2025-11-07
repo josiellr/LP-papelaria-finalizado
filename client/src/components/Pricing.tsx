@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { TrendingUp, CheckCircle, X, ArrowRight } from "lucide-react";
+import { TrendingUp, CheckCircle, X, ArrowRight, ArrowDown } from "lucide-react";
 import DynamicDateBadge from "./DynamicDateBadge";
 
 const pricingTiers = [
@@ -58,12 +58,14 @@ export default function Pricing() {
             </p>
           </div>
 
-          <div className="flex items-center justify-center gap-3 mb-8 md:mb-10">
-            <ArrowRight className="w-6 h-6 md:w-7 md:h-7 text-primary animate-pulse" />
+          <div className="flex flex-col md:flex-row items-center justify-center gap-3 mb-8 md:mb-10">
+            <ArrowRight className="hidden md:block w-7 h-7 text-primary animate-pulse" />
+            <ArrowDown className="block md:hidden w-6 h-6 text-primary animate-bounce" />
             <h3 className="font-heading font-bold text-xl md:text-2xl lg:text-3xl text-foreground">
               ESCOLHA SEU PACOTE:
             </h3>
-            <ArrowRight className="w-6 h-6 md:w-7 md:h-7 text-primary animate-pulse" />
+            <ArrowRight className="hidden md:block w-7 h-7 text-primary animate-pulse" />
+            <ArrowDown className="block md:hidden w-6 h-6 text-primary animate-bounce" />
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-12">
