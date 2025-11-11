@@ -1,8 +1,10 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { TrendingUp, CheckCircle, X, ArrowRight, ArrowDown } from "lucide-react";
-import DynamicDateBadge from "./DynamicDateBadge";
+import { TrendingUp, CheckCircle, X, ArrowRight, ArrowDown, Flame } from "lucide-react";
+import { useEffect, useState } from "react";
+import { format } from "date-fns";
+import { ptBR } from "date-fns/locale";
 
 const pricingTiers = [
   {
@@ -41,12 +43,22 @@ const pricingTiers = [
 ];
 
 export default function Pricing() {
+  const [currentDay, setCurrentDay] = useState("");
+  
+  useEffect(() => {
+    const day = format(new Date(), "dd 'DE' MMMM", { locale: ptBR });
+    setCurrentDay(day.toUpperCase());
+  }, []);
+
   return (
     <section id="offers" className="py-16 md:py-24 bg-gradient-to-br from-primary/10 via-accent/10 to-background">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
-            <DynamicDateBadge />
+            <div className="inline-flex items-center gap-2 bg-destructive text-destructive-foreground px-6 py-3 rounded-md font-heading font-bold text-sm md:text-base shadow-lg">
+              <Flame className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
+              <span>OFERTA ESPECIAL DE BLACK FRIDAY APLICADA SOMENTE ATÉ {currentDay}</span>
+            </div>
           </div>
           
           <div className="text-center mb-12 md:mb-16">
