@@ -17,7 +17,9 @@ const pricingTiers = [
       { text: "Pacote de temas e moldes limpos", price: "R$49,90", included: false },
       { text: "Curso Express – Canva do Zero ao Lucro", price: "R$29,00", included: false },
       { text: "Planner de vendas de papelaria", price: "R$19,00", included: false },
-      { text: "Pacote de mensagens e modelos de divulgação", price: "R$15,00", included: false }
+      { text: "Pacote de mensagens e modelos de divulgação", price: "R$15,00", included: false },
+      { text: "Acesso vitalício", price: "", included: true },
+      { text: "Garantia de 15 dias", price: "", included: true }
     ],
     buttonText: "COMEÇAR AGORA - R$10",
     isPopular: false,
@@ -33,7 +35,9 @@ const pricingTiers = [
       { text: "Pacote de temas e moldes limpos", price: "R$49,90", included: true },
       { text: "Curso Express – Canva do Zero ao Lucro", price: "R$29,00", included: true },
       { text: "Planner de vendas de papelaria", price: "R$19,00", included: true },
-      { text: "Pacote de mensagens e modelos de divulgação", price: "R$15,00", included: true }
+      { text: "Pacote de mensagens e modelos de divulgação", price: "R$15,00", included: true },
+      { text: "Acesso vitalício", price: "", included: true },
+      { text: "Garantia de 15 dias", price: "", included: true }
     ],
     buttonText: "QUERO O PLANO PREMIUM - R$27",
     isPopular: true,
