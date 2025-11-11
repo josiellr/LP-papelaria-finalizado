@@ -14,10 +14,10 @@ export default function BlackFridayBanner() {
   return (
     <div className="w-full bg-destructive text-destructive-foreground py-3 px-4">
       <div className="container mx-auto">
-        <div className="flex items-center justify-center gap-2 font-heading font-bold text-sm md:text-base">
+        <div className="flex items-center justify-center gap-2 font-heading font-bold text-xs md:text-sm">
           <Flame className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
-          <span className="text-center">
-            OFERTA ESPECIAL DE BLACK FRIDAY APLICADA SOMENTE ATÉ {currentDay}
+          <span className="text-center leading-tight">
+            OFERTA ESPECIAL DE BLACK FRIDAY<br />APLICADA SOMENTE ATÉ {currentDay}
           </span>
         </div>
       </div>

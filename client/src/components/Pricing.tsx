@@ -55,9 +55,9 @@ export default function Pricing() {
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 bg-destructive text-destructive-foreground px-6 py-3 rounded-md font-heading font-bold text-sm md:text-base shadow-lg">
+            <div className="inline-flex items-center gap-2 bg-destructive text-destructive-foreground px-6 py-3 rounded-md font-heading font-bold text-xs md:text-sm shadow-lg">
               <Flame className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
-              <span>OFERTA ESPECIAL DE BLACK FRIDAY APLICADA SOMENTE ATÉ {currentDay}</span>
+              <span className="leading-tight">OFERTA ESPECIAL DE BLACK FRIDAY<br />APLICADA SOMENTE ATÉ {currentDay}</span>
             </div>
           </div>
           
