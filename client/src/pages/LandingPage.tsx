@@ -1,3 +1,4 @@
+import BlackFridayBanner from "@/components/BlackFridayBanner";
 import Hero from "@/components/Hero";
 import HeadlineSection from "@/components/HeadlineSection";
 import InfiniteScroll from "@/components/InfiniteScroll";
@@ -16,6 +17,7 @@ import SalesNotification from "@/components/SalesNotification";
 export default function LandingPage() {
   return (
     <div className="min-h-screen">
+      <BlackFridayBanner />
       <Hero />
       <HeadlineSection />
       <InfiniteScroll />
