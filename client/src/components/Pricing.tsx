@@ -14,7 +14,7 @@ const pricingTiers = [
     discount: "91%",
     deliverables: [
       { text: "Kit de Papelaria Lucrativa (+430 festas prontas)", price: "R$59,00", included: true },
-      { text: "Pacote de temas e moldes limpos", price: "R$49,90", included: true },
+      { text: "Pacote de temas e moldes limpos", price: "R$49,90", included: false },
       { text: "Curso Express – Canva do Zero ao Lucro", price: "R$29,00", included: false },
       { text: "Planner de vendas de papelaria", price: "R$19,00", included: false },
       { text: "Pacote de mensagens e modelos de divulgação", price: "R$15,00", included: false }
