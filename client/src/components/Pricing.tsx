@@ -27,7 +27,7 @@ const pricingTiers = [
   },
   {
     name: "PACOTE PREMIUM",
-    price: "R$27",
+    price: "R$17",
     originalTotal: "R$171,90",
     discount: "91%",
     deliverables: [
@@ -39,7 +39,7 @@ const pricingTiers = [
       { text: "Acesso vitalício", price: "", included: true },
       { text: "Garantia de 15 dias", price: "", included: true }
     ],
-    buttonText: "QUERO O PLANO PREMIUM - R$27",
+    buttonText: "QUERO O PLANO PREMIUM - R$17",
     isPopular: true,
     checkoutLink: "https://pay.kiwify.com.br/1VDREq9",
     socialProof: "Comprado por mais de 743 pessoas nos últimos dias"
