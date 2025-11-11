@@ -11,7 +11,7 @@ const pricingTiers = [
     name: "PACOTE BÁSICO",
     price: "R$10",
     originalTotal: "R$108,90",
-    discount: "91%",
+    discount: "84%",
     deliverables: [
       { text: "Kit de Papelaria Lucrativa (+430 festas prontas)", price: "R$59,00", included: true },
       { text: "Acesso vitalício", price: "", included: true },
@@ -29,7 +29,7 @@ const pricingTiers = [
     name: "PACOTE PREMIUM",
     price: "R$27",
     originalTotal: "R$171,90",
-    discount: "84%",
+    discount: "91%",
     deliverables: [
       { text: "Kit de Papelaria Lucrativa (+430 festas prontas)", price: "R$59,00", included: true },
       { text: "Pacote de temas e moldes limpos", price: "R$49,90", included: true },
