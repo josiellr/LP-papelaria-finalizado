@@ -17,9 +17,8 @@ const pricingTiers = [
       { text: "Acesso vitalício", price: "", included: true },
       { text: "Garantia de 15 dias", price: "", included: true },
       { text: "Pacote de temas e moldes limpos", price: "R$49,90", included: false },
-      { text: "Curso Express – Canva do Zero ao Lucro", price: "R$29,00", included: false },
-      { text: "Planner de vendas de papelaria", price: "R$19,00", included: false },
-      { text: "Pacote de mensagens e modelos de divulgação", price: "R$15,00", included: false }
+      { text: "Convites digitais no Canva", price: "R$29,90", included: false },
+      { text: "Fontes personalizadas", price: "R$27,00", included: false }
     ],
     buttonText: "COMEÇAR AGORA - R$10",
     isPopular: false,
@@ -27,19 +26,18 @@ const pricingTiers = [
   },
   {
     name: "PACOTE PREMIUM",
-    price: "R$17",
+    price: "R$27",
     originalTotal: "R$171,90",
     discount: "91%",
     deliverables: [
       { text: "Kit de Papelaria Lucrativa (+430 festas prontas)", price: "R$59,00", included: true },
       { text: "Pacote de temas e moldes limpos", price: "R$49,90", included: true },
-      { text: "Curso Express – Canva do Zero ao Lucro", price: "R$29,00", included: true },
-      { text: "Planner de vendas de papelaria", price: "R$19,00", included: true },
-      { text: "Pacote de mensagens e modelos de divulgação", price: "R$15,00", included: true },
+      { text: "Convites digitais no Canva", price: "R$29,90", included: true },
+      { text: "Fontes personalizadas", price: "R$27,00", included: true },
       { text: "Acesso vitalício", price: "", included: true },
       { text: "Garantia de 15 dias", price: "", included: true }
     ],
-    buttonText: "QUERO O PLANO PREMIUM - R$17",
+    buttonText: "QUERO O PLANO PREMIUM - R$27",
     isPopular: true,
     checkoutLink: "https://pay.kiwify.com.br/1VDREq9",
     socialProof: "Comprado por mais de 743 pessoas nos últimos dias"
