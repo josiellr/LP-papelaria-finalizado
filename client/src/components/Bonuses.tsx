@@ -1,41 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { GraduationCap, Calendar, MessageSquare, Sparkles, CheckCircle } from "lucide-react";
+import { Sparkles, Mail, Type, CheckCircle } from "lucide-react";
 
 const bonuses = [
-  {
-    icon: GraduationCap,
-    title: 'Curso Express – "Canva: Do Zero ao Lucro"',
-    description: "Aprenda em poucos minutos a editar os moldes em seu celular e criar festas lindas em seu celular usando o Canva Grátis.",
-    items: [
-      "Como usar Canva do básico a avançado",
-      "Edição de convites, topos de bolo e embalagens",
-      "Tipos de impressão e acabamentos profissional"
-    ],
-    originalPrice: "R$29,00"
-  },
-  {
-    icon: Calendar,
-    title: "Planner de Vendas de Papelaria",
-    description: "O organizador perfeito para planejar temas, pedidos e lucro.",
-    items: [
-      "Planilha de precificação automática",
-      "Metas semanais de ganhos",
-      "Controle de orçamento e entrega"
-    ],
-    originalPrice: "R$19,00"
-  },
-  {
-    icon: MessageSquare,
-    title: "Pacote de mensagens e modelos de divulgação",
-    description: "Textos prontos para WhatsApp e Instagram que vendem por ti.",
-    items: [
-      "Mensagens para fechar vendas rápido.",
-      "Guia de respostas para clientes indecisos",
-      "Textos prontos para status e publicações"
-    ],
-    originalPrice: "R$15,00"
-  },
   {
     icon: Sparkles,
     title: "Pacote de Temas e Moldes Limpos",
@@ -43,9 +10,31 @@ const bonuses = [
     items: [
       "Mais de 257 temas de festas",
       "Mais de 20 moldes limpos",
-      "Arquivos 100% otimizados para corte manual (tesoura ou estilete)."
+      "Arquivos 100% otimizados para corte manual (tesoura ou estilete)"
     ],
     originalPrice: "R$49,90"
+  },
+  {
+    icon: Mail,
+    title: "Convites Digitais no Canva",
+    description: "Modelos de convites digitais prontos para personalizar e enviar aos convidados de forma rápida e prática.",
+    items: [
+      "Mais de 150 modelos de convites digitais",
+      "Totalmente editáveis no Canva",
+      "Formatos otimizados para WhatsApp e Instagram"
+    ],
+    originalPrice: "R$29,90"
+  },
+  {
+    icon: Type,
+    title: "Fontes Personalizadas",
+    description: "Coleção exclusiva de fontes premium para deixar suas artes ainda mais profissionais e únicas.",
+    items: [
+      "Mais de 50 fontes premium selecionadas",
+      "Estilos variados para todos os temas",
+      "Compatível com qualquer programa de edição"
+    ],
+    originalPrice: "R$27,00"
   }
 ];
 
@@ -56,7 +45,7 @@ export default function Bonuses() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4">
-              4 BÔNUS IRRESISTÍVEIS
+              3 BÔNUS EXCLUSIVOS
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground">
               Vendemos separado, mas nessa página você leva de graça!
