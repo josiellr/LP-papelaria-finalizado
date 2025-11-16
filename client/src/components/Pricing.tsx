@@ -149,7 +149,7 @@ export default function Pricing() {
                   
                   <Badge variant="secondary" className="font-semibold text-sm px-4 py-2">
                     {tier.isPopular ? (
-                      <>Escolhido por {peopleCount} pessoas este mês</>
+                      <>Escolhido por {peopleCount} pessoas nos últimos dias</>
                     ) : (
                       <>Oferta especial por tempo limitado</>
                     )}
