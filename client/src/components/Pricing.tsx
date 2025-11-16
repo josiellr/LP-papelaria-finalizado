@@ -1,7 +1,8 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { TrendingUp, CheckCircle, X, ArrowRight, ArrowDown, Flame } from "lucide-react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
+import { TrendingUp, CheckCircle, X, ArrowRight, ArrowDown, Flame, Gift } from "lucide-react";
 import { useEffect, useState } from "react";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
@@ -50,6 +51,7 @@ export default function Pricing() {
   const [currentDay, setCurrentDay] = useState("");
   const [peopleCount, setPeopleCount] = useState(957);
   const [timeRemaining, setTimeRemaining] = useState("");
+  const [showUpsellDialog, setShowUpsellDialog] = useState(false);
   
   useEffect(() => {
     const day = format(new Date(), "dd 'DE' MMMM", { locale: ptBR });
@@ -200,15 +202,27 @@ export default function Pricing() {
                     </div>
                   </div>
                   
-                  <Button
-                    asChild
-                    variant={tier.isPopular ? "default" : "secondary"}
-                    size="lg"
-                    className="w-full font-heading font-bold text-base md:text-lg py-6 md:py-7"
-                    data-testid={`button-checkout-${index}`}
-                  >
-                    <a href={tier.checkoutLink}>{tier.buttonText}</a>
-                  </Button>
+                  {tier.isPopular ? (
+                    <Button
+                      asChild
+                      variant="default"
+                      size="lg"
+                      className="w-full font-heading font-bold text-base md:text-lg py-6 md:py-7"
+                      data-testid={`button-checkout-${index}`}
+                    >
+                      <a href={tier.checkoutLink}>{tier.buttonText}</a>
+                    </Button>
+                  ) : (
+                    <Button
+                      onClick={() => setShowUpsellDialog(true)}
+                      variant="secondary"
+                      size="lg"
+                      className="w-full font-heading font-bold text-base md:text-lg py-6 md:py-7"
+                      data-testid={`button-checkout-${index}`}
+                    >
+                      {tier.buttonText}
+                    </Button>
+                  )}
                   
                   <p className="text-xs text-center text-muted-foreground">
                     Compra segura com certificados de segurança.
@@ -219,6 +233,77 @@ export default function Pricing() {
           </div>
         </div>
       </div>
+
+      <Dialog open={showUpsellDialog} onOpenChange={setShowUpsellDialog}>
+        <DialogContent className="sm:max-w-md bg-background">
+          <div className="flex flex-col items-center text-center space-y-6 py-4">
+            <div className="text-6xl animate-bounce">
+              🎁
+            </div>
+            
+            <div className="space-y-2">
+              <h2 className="font-heading font-bold text-2xl md:text-3xl text-foreground">
+                ESPERE! OFERTA ESPECIAL<br />DO PACOTE PREMIUM!
+              </h2>
+              <p className="text-base md:text-lg text-muted-foreground">
+                Faça o upgrade agora para o pacote premium<br />com desconto extra
+              </p>
+            </div>
+
+            <div className="space-y-2">
+              <p className="text-lg text-muted-foreground">
+                De <span className="line-through">R$27</span>
+              </p>
+              <p className="font-heading font-bold text-4xl md:text-5xl text-green-600 dark:text-green-500">
+                Por apenas R$19,90
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Economize R$7,10 agora!
+              </p>
+            </div>
+
+            <div className="w-full bg-muted/30 rounded-md p-4 space-y-3">
+              <div className="flex items-center gap-3">
+                <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-500 flex-shrink-0" />
+                <p className="text-sm md:text-base text-left">Acesso vitalício</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-500 flex-shrink-0" />
+                <p className="text-sm md:text-base text-left">Atualizações mensais</p>
+              </div>
+              <div className="flex items-center gap-3">
+                <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-500 flex-shrink-0" />
+                <p className="text-sm md:text-base text-left">Suporte prioritário</p>
+              </div>
+            </div>
+
+            <div className="w-full space-y-3">
+              <Button
+                asChild
+                className="w-full font-heading font-bold text-base md:text-lg py-6 bg-green-600 hover:bg-green-700 text-white border-2 border-green-700"
+                size="lg"
+                data-testid="button-upsell-accept"
+              >
+                <a href="https://pay.kiwify.com.br/LINK_DESCONTO_PREMIUM">
+                  SIM, QUERO O PACOTE PREMIUM - R$19,90
+                </a>
+              </Button>
+              
+              <Button
+                asChild
+                variant="outline"
+                className="w-full font-heading font-bold text-base md:text-lg py-6"
+                size="lg"
+                data-testid="button-upsell-decline"
+              >
+                <a href="https://pay.kiwify.com.br/6P8i9Ja">
+                  NÃO, QUERO O BÁSICO MESMO - R$10
+                </a>
+              </Button>
+            </div>
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 }
