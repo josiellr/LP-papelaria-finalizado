@@ -14,11 +14,11 @@ const pricingTiers = [
     discount: "84%",
     deliverables: [
       { text: "Kit de Papelaria Lucrativa (+430 festas prontas)", price: "R$59,00", included: true },
-      { text: "Acesso vitalício", price: "", included: true },
-      { text: "Garantia de 15 dias", price: "", included: true },
-      { text: "Pacote de temas e moldes limpos", price: "R$49,90", included: false },
-      { text: "Convites digitais no Canva", price: "R$29,90", included: false },
-      { text: "Fontes personalizadas", price: "R$27,00", included: false }
+      { text: "Pacote de temas e moldes limpos", price: "R$49,90", included: true },
+      { text: "Convites digitais no Canva", price: "R$29,90", included: true },
+      { text: "Fontes personalizadas", price: "R$27,00", included: true },
+      { text: "Acesso por 3 meses", price: "", included: true },
+      { text: "Garantia de 15 dias", price: "", included: true }
     ],
     buttonText: "COMEÇAR AGORA - R$10",
     isPopular: false,
@@ -35,7 +35,9 @@ const pricingTiers = [
       { text: "Convites digitais no Canva", price: "R$29,90", included: true },
       { text: "Fontes personalizadas", price: "R$27,00", included: true },
       { text: "Acesso vitalício", price: "", included: true },
-      { text: "Garantia de 15 dias", price: "", included: true }
+      { text: "Garantia de 15 dias", price: "", included: true },
+      { text: "Suporte prioritário", price: "", included: true },
+      { text: "Atualizações mensais", price: "", included: true }
     ],
     buttonText: "QUERO O PLANO PREMIUM - R$27",
     isPopular: true,
