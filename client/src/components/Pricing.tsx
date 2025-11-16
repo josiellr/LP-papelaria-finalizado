@@ -147,13 +147,15 @@ export default function Pricing() {
                     {tier.name}
                   </h3>
                   
-                  <Badge variant="secondary" className="font-semibold text-xs md:text-sm px-3 md:px-4 py-2 whitespace-normal text-center">
-                    {tier.isPopular ? (
-                      <>Escolhido por {peopleCount} pessoas nos últimos dias</>
-                    ) : (
-                      <>Oferta especial por tempo limitado</>
-                    )}
-                  </Badge>
+                  <div className="flex justify-center">
+                    <Badge variant="secondary" className="font-semibold text-xs md:text-sm px-3 md:px-4 py-2 whitespace-normal text-center">
+                      {tier.isPopular ? (
+                        <>Escolhido por {peopleCount} pessoas nos últimos dias</>
+                      ) : (
+                        <>Oferta especial por tempo limitado</>
+                      )}
+                    </Badge>
+                  </div>
                 </CardHeader>
                 
                 <CardContent className="space-y-6">
