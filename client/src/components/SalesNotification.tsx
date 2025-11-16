@@ -77,11 +77,16 @@ const timeOptions = [
   "há 42 minutos"
 ];
 
+let notificationCounter = 0;
+
 const generateRandomSale = (): Sale => {
+  notificationCounter++;
+  const isPremium = notificationCounter % 5 !== 0;
+  
   return {
     name: femaleNames[Math.floor(Math.random() * femaleNames.length)],
     location: locations[Math.floor(Math.random() * locations.length)],
-    package: packages[Math.floor(Math.random() * packages.length)],
+    package: isPremium ? "Pacote Premium (R$27)" : "Pacote Básico (R$10)",
     timeAgo: timeOptions[Math.floor(Math.random() * timeOptions.length)]
   };
 };

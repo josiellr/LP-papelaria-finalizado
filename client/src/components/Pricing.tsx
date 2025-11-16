@@ -46,10 +46,43 @@ const pricingTiers = [
 
 export default function Pricing() {
   const [currentDay, setCurrentDay] = useState("");
+  const [peopleCount, setPeopleCount] = useState(957);
+  const [timeRemaining, setTimeRemaining] = useState("");
   
   useEffect(() => {
     const day = format(new Date(), "dd 'DE' MMMM", { locale: ptBR });
     setCurrentDay(day.toUpperCase());
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPeopleCount(prev => prev + 1);
+    }, 15000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const updateCountdown = () => {
+      const now = new Date();
+      const brasilia = new Date(now.toLocaleString("en-US", { timeZone: "America/Sao_Paulo" }));
+      
+      const midnight = new Date(brasilia);
+      midnight.setHours(24, 0, 0, 0);
+      
+      const diff = midnight.getTime() - brasilia.getTime();
+      
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      
+      setTimeRemaining(`${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`);
+    };
+
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
+
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -57,9 +90,16 @@ export default function Pricing() {
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-2 bg-destructive text-destructive-foreground px-6 py-3 rounded-md font-heading font-bold text-xs md:text-sm shadow-lg">
-              <Flame className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
-              <span className="leading-tight">OFERTA ESPECIAL DE BLACK FRIDAY<br />APLICADA SOMENTE ATÉ {currentDay}</span>
+            <div className="inline-flex flex-col items-center gap-2 bg-destructive text-destructive-foreground px-6 py-3 rounded-md font-heading font-bold text-xs md:text-sm shadow-lg">
+              <div className="flex items-center gap-2">
+                <Flame className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
+                <span className="leading-tight">OFERTA ESPECIAL DE BLACK FRIDAY<br />APLICADA SOMENTE ATÉ HOJE {currentDay}</span>
+              </div>
+              {timeRemaining && (
+                <div className="text-lg md:text-xl font-mono font-bold">
+                  {timeRemaining}
+                </div>
+              )}
             </div>
           </div>
           
@@ -108,7 +148,11 @@ export default function Pricing() {
                   </h3>
                   
                   <Badge variant="secondary" className="font-semibold text-sm px-4 py-2">
-                    Oferta especial por tempo limitado
+                    {tier.isPopular ? (
+                      <>Escolhido por {peopleCount} pessoas este mês</>
+                    ) : (
+                      <>Oferta especial por tempo limitado</>
+                    )}
                   </Badge>
                 </CardHeader>
                 
@@ -161,12 +205,6 @@ export default function Pricing() {
                   >
                     <a href={tier.checkoutLink}>{tier.buttonText}</a>
                   </Button>
-                  
-                  {tier.socialProof && (
-                    <p className="text-xs text-center text-muted-foreground italic">
-                      {tier.socialProof}
-                    </p>
-                  )}
                   
                   <p className="text-xs text-center text-muted-foreground">
                     Compra segura com certificados de segurança.
