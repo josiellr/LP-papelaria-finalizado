@@ -235,52 +235,52 @@ export default function Pricing() {
       </div>
 
       <Dialog open={showUpsellDialog} onOpenChange={setShowUpsellDialog}>
-        <DialogContent className="sm:max-w-md bg-background">
-          <div className="flex flex-col items-center text-center space-y-6 py-4">
-            <div className="text-6xl animate-bounce">
+        <DialogContent className="w-[90%] max-w-md mx-auto bg-background">
+          <div className="flex flex-col items-center text-center space-y-4 md:space-y-6 py-2 md:py-4">
+            <div className="text-5xl md:text-6xl animate-bounce">
               🎁
             </div>
             
-            <div className="space-y-2">
-              <h2 className="font-heading font-bold text-2xl md:text-3xl text-foreground">
+            <div className="space-y-1 md:space-y-2">
+              <h2 className="font-heading font-bold text-xl md:text-3xl text-foreground leading-tight">
                 ESPERE! OFERTA ESPECIAL<br />DO PACOTE PREMIUM!
               </h2>
-              <p className="text-base md:text-lg text-muted-foreground">
-                Faça o upgrade agora para o pacote premium<br />com desconto extra
+              <p className="text-sm md:text-lg text-muted-foreground">
+                Faça o upgrade agora para o pacote premium com desconto extra
               </p>
             </div>
 
-            <div className="space-y-2">
-              <p className="text-lg text-muted-foreground">
+            <div className="space-y-1 md:space-y-2">
+              <p className="text-base md:text-lg text-muted-foreground">
                 De <span className="line-through">R$27</span>
               </p>
-              <p className="font-heading font-bold text-4xl md:text-5xl text-green-600 dark:text-green-500">
+              <p className="font-heading font-bold text-3xl md:text-5xl text-green-600 dark:text-green-500">
                 Por apenas R$19,90
               </p>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-xs md:text-sm text-muted-foreground">
                 Economize R$7,10 agora!
               </p>
             </div>
 
-            <div className="w-full bg-muted/30 rounded-md p-4 space-y-3">
-              <div className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-500 flex-shrink-0" />
-                <p className="text-sm md:text-base text-left">Acesso vitalício</p>
+            <div className="w-full bg-muted/30 rounded-md p-3 md:p-4 space-y-2 md:space-y-3">
+              <div className="flex items-center gap-2 md:gap-3">
+                <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-600 dark:text-green-500 flex-shrink-0" />
+                <p className="text-xs md:text-base text-left">Acesso vitalício</p>
               </div>
-              <div className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-500 flex-shrink-0" />
-                <p className="text-sm md:text-base text-left">Atualizações mensais</p>
+              <div className="flex items-center gap-2 md:gap-3">
+                <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-600 dark:text-green-500 flex-shrink-0" />
+                <p className="text-xs md:text-base text-left">Atualizações mensais</p>
               </div>
-              <div className="flex items-center gap-3">
-                <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-500 flex-shrink-0" />
-                <p className="text-sm md:text-base text-left">Suporte prioritário</p>
+              <div className="flex items-center gap-2 md:gap-3">
+                <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-600 dark:text-green-500 flex-shrink-0" />
+                <p className="text-xs md:text-base text-left">Suporte prioritário</p>
               </div>
             </div>
 
-            <div className="w-full space-y-3">
+            <div className="w-full space-y-2 md:space-y-3">
               <Button
                 asChild
-                className="w-full font-heading font-bold text-base md:text-lg py-6 bg-green-600 hover:bg-green-700 text-white border-2 border-green-700"
+                className="w-full font-heading font-bold text-xs md:text-lg py-5 md:py-6 bg-green-600 hover:bg-green-700 text-white border-2 border-green-700"
                 size="lg"
                 data-testid="button-upsell-accept"
               >
@@ -292,7 +292,7 @@ export default function Pricing() {
               <Button
                 asChild
                 variant="outline"
-                className="w-full font-heading font-bold text-base md:text-lg py-6"
+                className="w-full font-heading font-bold text-xs md:text-lg py-5 md:py-6"
                 size="lg"
                 data-testid="button-upsell-decline"
               >
