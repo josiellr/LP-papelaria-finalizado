@@ -23,7 +23,7 @@ const pricingTiers = [
     ],
     buttonText: "COMEÇAR AGORA - R$10",
     isPopular: false,
-    checkoutLink: "https://pay.kiwify.com.br/6P8i9Ja"
+    checkoutLink: "https://pay.kiwify.com.br/IcKLLxb"
   },
   {
     name: "PACOTE PREMIUM",
@@ -296,7 +296,7 @@ export default function Pricing() {
                 size="lg"
                 data-testid="button-upsell-decline"
               >
-                <a href="https://pay.kiwify.com.br/6P8i9Ja">
+                <a href="https://pay.kiwify.com.br/IcKLLxb">
                   NÃO, QUERO O BÁSICO MESMO - R$10
                 </a>
               </Button>
