@@ -284,7 +284,7 @@ export default function Pricing() {
                 size="lg"
                 data-testid="button-upsell-accept"
               >
-                <a href="https://pay.kiwify.com.br/LINK_DESCONTO_PREMIUM">
+                <a href="https://pay.kiwify.com.br/rRPB02l">
                   SIM, QUERO O PACOTE PREMIUM - R$19,90
                 </a>
               </Button>
