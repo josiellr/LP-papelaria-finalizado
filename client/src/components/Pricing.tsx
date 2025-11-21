@@ -27,7 +27,7 @@ const pricingTiers = [
   },
   {
     name: "PACOTE PREMIUM",
-    price: "R$27",
+    price: "R$29,90",
     originalTotal: "R$171,90",
     discount: "91%",
     deliverables: [
@@ -35,14 +35,14 @@ const pricingTiers = [
       { text: "Pacote de temas e moldes limpos", price: "R$49,90", included: true },
       { text: "Convites digitais no Canva", price: "R$29,90", included: true },
       { text: "Fontes personalizadas", price: "R$27,00", included: true },
-      { text: "Acesso vitalício", price: "", included: true },
+      { text: "Acesso por 1 ano", price: "", included: true },
       { text: "Garantia de 15 dias", price: "", included: true },
       { text: "Suporte prioritário", price: "", included: true },
       { text: "Atualizações mensais", price: "", included: true }
     ],
-    buttonText: "QUERO O PLANO PREMIUM - R$27",
+    buttonText: "QUERO O PLANO PREMIUM - R$29,90",
     isPopular: true,
-    checkoutLink: "https://pay.kiwify.com.br/1VDREq9",
+    checkoutLink: "https://pay.kiwify.com.br/t8I0sae",
     socialProof: "Comprado por mais de 743 pessoas nos últimos dias"
   }
 ];
@@ -252,20 +252,20 @@ export default function Pricing() {
 
             <div className="space-y-1 md:space-y-2">
               <p className="text-base md:text-lg text-muted-foreground">
-                De <span className="line-through">R$27</span>
+                De <span className="line-through">R$29,90</span>
               </p>
               <p className="font-heading font-bold text-3xl md:text-5xl text-green-600 dark:text-green-500">
                 Por apenas R$19,90
               </p>
               <p className="text-xs md:text-sm text-muted-foreground">
-                Economize R$7,10 agora!
+                Economize R$10,00 agora!
               </p>
             </div>
 
             <div className="w-full bg-muted/30 rounded-md p-3 md:p-4 space-y-2 md:space-y-3">
               <div className="flex items-center gap-2 md:gap-3">
                 <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-600 dark:text-green-500 flex-shrink-0" />
-                <p className="text-xs md:text-base text-left">Acesso vitalício</p>
+                <p className="text-xs md:text-base text-left">Acesso por 1 ano</p>
               </div>
               <div className="flex items-center gap-2 md:gap-3">
                 <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-600 dark:text-green-500 flex-shrink-0" />
