@@ -20,15 +20,15 @@ export default function Hero() {
       <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 py-16 md:py-24">
         <div className="max-w-4xl mx-auto text-center text-white">
           <div className="inline-block mb-4">
-            <p className="text-xl md:text-2xl lg:text-3xl font-bold tracking-wide uppercase">BAIXE AGORA:</p>
+            <p className="text-lg md:text-xl lg:text-2xl font-bold tracking-wide uppercase">O KIT FESTAS LUCRATIVAS</p>
           </div>
           
-          <h1 className="font-heading font-bold text-4xl md:text-6xl lg:text-7xl mb-4 leading-tight">
-            O KIT DE FESTAS LUCRATIVAS
+          <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-4 leading-tight">
+            GERE DE R$ 1.000 A R$ 2.000 TODOS OS MESES MONTANDO CAIXAS PERSONALIZADAS NA MESA DA SUA COZINHA.
           </h1>
           
-          <p className="text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed max-w-3xl mx-auto">
-            +430 moldes prontos para adicionar o nome, idade do aniversariante e vender na sua cidade ou online. Funciona até mesmo para quem nunca mexeu com papelaria personalizada antes!
+          <p className="text-base md:text-lg lg:text-xl mb-8 leading-relaxed max-w-3xl mx-auto">
+            Pare de quebrar a cabeça procurando arquivos soltos na internet e criando do zero. Tenha acesso imediato a 1.137 Temas Prontos, mais de 25 Moldes Validados e 237 Fontes Exclusivas. É só baixar, editar no Canva e vender, mesmo sem experiência.
           </p>
           
           <div className="mb-8 flex justify-center">
