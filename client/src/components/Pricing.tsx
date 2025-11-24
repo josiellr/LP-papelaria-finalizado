@@ -112,7 +112,7 @@ export default function Pricing() {
               LEVE TUDO ISSO COM<br />92% DE DESCONTO!
             </h2>
             <p className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto">
-              Mais de 430 festas prontas para colocar nome, idade e vender hoje mesmo sem necessidade de criar do zero.
+              Mais de 25 moldes, 1.137 temas, 237 fontes personalizadas para editar rápido no Canva e começar a lucrar.
             </p>
           </div>
 
