@@ -1,7 +1,7 @@
 import { Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@assets/generated_images/Festive_party_celebration_hero_549b0c91.png";
-import mockupImage from "@assets/mockup-exemplo.webp";
+import mockupImage from "@assets/mockup-exemplo.png";
 
 export default function Hero() {
   const scrollToOffers = () => {
