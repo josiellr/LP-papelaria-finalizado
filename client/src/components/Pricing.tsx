@@ -1,8 +1,7 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
-import { TrendingUp, CheckCircle, X, ArrowRight, ArrowDown, Flame, Gift } from "lucide-react";
+import { TrendingUp, CheckCircle, X, ArrowRight, ArrowDown, Flame } from "lucide-react";
 import { useEffect, useState } from "react";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
@@ -10,37 +9,37 @@ import { ptBR } from "date-fns/locale";
 const pricingTiers = [
   {
     name: "PACOTE BÁSICO",
-    price: "R$10",
+    price: "R$4,99",
     originalTotal: "R$108,90",
-    discount: "84%",
+    savings: "R$104",
     deliverables: [
-      { text: "Kit de Papelaria Lucrativa (+430 festas prontas)", price: "R$59,00", included: true },
-      { text: "Pacote de temas e moldes limpos", price: "R$49,90", included: true },
-      { text: "Convites digitais no Canva", price: "R$29,90", included: true },
-      { text: "Fontes personalizadas", price: "R$27,00", included: true },
-      { text: "Acesso por 3 meses", price: "", included: true },
-      { text: "Garantia de 15 dias", price: "", included: true }
+      { text: "Acesso por 3 meses", included: true },
+      { text: "+25 moldes limpos para o Canva", included: true },
+      { text: "+1137 temas de festas", included: true },
+      { text: "+237 fontes personalizadas", included: true },
+      { text: "Atualizações por 3 meses", included: true },
+      { text: "Garantia de 15 dias", included: true },
+      { text: "Compra Segura pela Kiwify", included: true }
     ],
-    buttonText: "COMEÇAR AGORA - R$10",
+    buttonText: "COMEÇAR AGORA - R$4,99",
     isPopular: false,
     checkoutLink: "https://pay.kiwify.com.br/IcKLLxb"
   },
   {
     name: "PACOTE PREMIUM",
-    price: "R$29,90",
+    price: "R$10",
     originalTotal: "R$171,90",
-    discount: "91%",
+    savings: "R$161,90",
     deliverables: [
-      { text: "Kit de Papelaria Lucrativa (+430 festas prontas)", price: "R$59,00", included: true },
-      { text: "Pacote de temas e moldes limpos", price: "R$49,90", included: true },
-      { text: "Convites digitais no Canva", price: "R$29,90", included: true },
-      { text: "Fontes personalizadas", price: "R$27,00", included: true },
-      { text: "Acesso por 1 ano", price: "", included: true },
-      { text: "Garantia de 15 dias", price: "", included: true },
-      { text: "Suporte prioritário", price: "", included: true },
-      { text: "Atualizações mensais", price: "", included: true }
+      { text: "Acesso vitalício", included: true },
+      { text: "+25 moldes limpos para o Canva", included: true },
+      { text: "+1137 temas de festas", included: true },
+      { text: "+237 fontes personalizadas", included: true },
+      { text: "Atualizações por 1 ano", included: true },
+      { text: "Garantia de 15 dias", included: true },
+      { text: "Compra Segura pela Kiwify", included: true }
     ],
-    buttonText: "QUERO O PLANO PREMIUM - R$29,90",
+    buttonText: "QUERO O PLANO PREMIUM - R$10",
     isPopular: true,
     checkoutLink: "https://pay.kiwify.com.br/t8I0sae",
     socialProof: "Comprado por mais de 743 pessoas nos últimos dias"
@@ -51,7 +50,6 @@ export default function Pricing() {
   const [currentDay, setCurrentDay] = useState("");
   const [peopleCount, setPeopleCount] = useState(957);
   const [timeRemaining, setTimeRemaining] = useState("");
-  const [showUpsellDialog, setShowUpsellDialog] = useState(false);
   
   useEffect(() => {
     const day = format(new Date(), "dd 'DE' MMMM", { locale: ptBR });
@@ -171,14 +169,9 @@ export default function Pricing() {
                         ) : (
                           <X className="w-5 h-5 text-muted-foreground flex-shrink-0 mt-0.5" />
                         )}
-                        <div className="flex items-start justify-between gap-3 flex-1">
-                          <p className="text-sm md:text-base flex-1">
-                            {deliverable.text}
-                          </p>
-                          <span className="text-sm md:text-base font-bold text-red-500 line-through flex-shrink-0">
-                            {deliverable.price}
-                          </span>
-                        </div>
+                        <p className="text-sm md:text-base flex-1">
+                          {deliverable.text}
+                        </p>
                       </div>
                     ))}
                   </div>
@@ -197,32 +190,20 @@ export default function Pricing() {
                         {tier.price}
                       </p>
                       <Badge variant="secondary" className="font-bold">
-                        {tier.discount} DE DESCONTO
+                        ECONOMIZE {tier.savings}
                       </Badge>
                     </div>
                   </div>
                   
-                  {tier.isPopular ? (
-                    <Button
-                      asChild
-                      variant="default"
-                      size="lg"
-                      className="w-full font-heading font-bold text-base md:text-lg py-6 md:py-7"
-                      data-testid={`button-checkout-${index}`}
-                    >
-                      <a href={tier.checkoutLink}>{tier.buttonText}</a>
-                    </Button>
-                  ) : (
-                    <Button
-                      onClick={() => setShowUpsellDialog(true)}
-                      variant="secondary"
-                      size="lg"
-                      className="w-full font-heading font-bold text-base md:text-lg py-6 md:py-7"
-                      data-testid={`button-checkout-${index}`}
-                    >
-                      {tier.buttonText}
-                    </Button>
-                  )}
+                  <Button
+                    asChild
+                    variant={tier.isPopular ? "default" : "secondary"}
+                    size="lg"
+                    className="w-full font-heading font-bold text-base md:text-lg py-6 md:py-7"
+                    data-testid={`button-checkout-${index}`}
+                  >
+                    <a href={tier.checkoutLink}>{tier.buttonText}</a>
+                  </Button>
                   
                   <p className="text-xs text-center text-muted-foreground">
                     Compra segura com certificados de segurança.
@@ -233,77 +214,6 @@ export default function Pricing() {
           </div>
         </div>
       </div>
-
-      <Dialog open={showUpsellDialog} onOpenChange={setShowUpsellDialog}>
-        <DialogContent className="w-[95%] max-w-lg mx-auto bg-background max-h-[90vh] overflow-y-auto">
-          <div className="flex flex-col items-center text-center space-y-3 md:space-y-4 py-1 md:py-2">
-            <div className="text-4xl md:text-5xl animate-bounce">
-              🎁
-            </div>
-            
-            <div className="space-y-1">
-              <h2 className="font-heading font-bold text-lg md:text-2xl text-foreground leading-tight">
-                ESPERE! OFERTA ESPECIAL<br />DO PACOTE PREMIUM!
-              </h2>
-              <p className="text-xs md:text-sm text-muted-foreground">
-                Faça o upgrade agora para o pacote premium com desconto extra
-              </p>
-            </div>
-
-            <div className="space-y-1">
-              <p className="text-sm md:text-base text-muted-foreground">
-                De <span className="line-through">R$29,90</span>
-              </p>
-              <p className="font-heading font-bold text-3xl md:text-4xl text-green-600 dark:text-green-500">
-                Por apenas R$19,90
-              </p>
-              <p className="text-xs text-muted-foreground">
-                Economize R$10,00 agora!
-              </p>
-            </div>
-
-            <div className="w-full bg-muted/30 rounded-md p-3 space-y-2">
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-500 flex-shrink-0" />
-                <p className="text-xs md:text-sm text-left">Acesso por 1 ano</p>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-500 flex-shrink-0" />
-                <p className="text-xs md:text-sm text-left">Atualizações mensais</p>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-500 flex-shrink-0" />
-                <p className="text-xs md:text-sm text-left">Suporte prioritário</p>
-              </div>
-            </div>
-
-            <div className="w-full space-y-2">
-              <Button
-                asChild
-                className="w-full font-heading font-bold text-xs md:text-sm py-4 md:py-5 bg-green-600 hover:bg-green-700 text-white border-2 border-green-700"
-                size="lg"
-                data-testid="button-upsell-accept"
-              >
-                <a href="https://pay.kiwify.com.br/rRPB02l">
-                  SIM, QUERO O PACOTE PREMIUM - R$19,90
-                </a>
-              </Button>
-              
-              <Button
-                asChild
-                variant="outline"
-                className="w-full font-heading font-bold text-xs md:text-sm py-4 md:py-5"
-                size="lg"
-                data-testid="button-upsell-decline"
-              >
-                <a href="https://pay.kiwify.com.br/IcKLLxb">
-                  NÃO, QUERO O BÁSICO MESMO - R$10
-                </a>
-              </Button>
-            </div>
-          </div>
-        </DialogContent>
-      </Dialog>
     </section>
   );
 }
