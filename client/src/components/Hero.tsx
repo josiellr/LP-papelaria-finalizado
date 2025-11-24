@@ -57,6 +57,29 @@ export default function Hero() {
           >
             QUERO COMEÇAR A LUCRAR AGORA
           </Button>
+          
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 max-w-3xl mx-auto text-left">
+            <div className="flex items-center gap-2 text-white/90 text-sm md:text-base justify-start" data-testid="feature-fast-editing">
+              <span className="text-xl">⚡</span>
+              <span>Edição rápida e fácil</span>
+            </div>
+            <div className="flex items-center gap-2 text-white/90 text-sm md:text-base justify-start" data-testid="feature-canva">
+              <span className="text-xl">🎨</span>
+              <span>Moldes para o Canva</span>
+            </div>
+            <div className="flex items-center gap-2 text-white/90 text-sm md:text-base justify-start" data-testid="feature-quality">
+              <span className="text-xl">✨</span>
+              <span>Imagens de alta qualidade</span>
+            </div>
+            <div className="flex items-center gap-2 text-white/90 text-sm md:text-base justify-start" data-testid="feature-no-experience">
+              <span className="text-xl">✅</span>
+              <span>Não precisa saber designer</span>
+            </div>
+            <div className="flex items-center gap-2 text-white/90 text-sm md:text-base md:col-span-2 lg:col-span-1 justify-start" data-testid="feature-trial">
+              <span className="text-xl">🛡️</span>
+              <span>Teste sem compromisso por 7 dias</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
