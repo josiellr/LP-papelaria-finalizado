@@ -43,7 +43,7 @@ export default function IdealFor() {
                   <h3 className="font-heading font-bold text-2xl md:text-2xl lg:text-3xl mb-3 md:mb-4 text-primary">
                     {profile.title}
                   </h3>
-                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                     {profile.description}
                   </p>
                 </CardContent>
