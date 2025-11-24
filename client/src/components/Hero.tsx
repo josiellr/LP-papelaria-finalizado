@@ -24,7 +24,7 @@ export default function Hero() {
           </div>
           
           <h1 className="font-heading font-bold text-3xl md:text-5xl lg:text-6xl mb-4 leading-tight">
-            GERE DE R$ 1.000 A R$ 2.000 TODOS OS MESES MONTANDO CAIXAS PERSONALIZADAS NA MESA DA SUA COZINHA.
+            GERE DE <span className="text-accent">R$ 1.000 A R$ 2.000</span> TODOS OS MESES MONTANDO <span className="text-accent">CAIXAS PERSONALIZADAS</span> NA MESA DA SUA COZINHA.
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed max-w-3xl mx-auto">
