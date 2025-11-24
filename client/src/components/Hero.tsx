@@ -33,7 +33,7 @@ export default function Hero() {
           
           <div className="mb-8 flex justify-center">
             <img 
-              src={mockupImage} 
+              src="https://i.ibb.co/SXgD9xKp/Mockup-exemplo-1080x1350-pacote-molde.webp" 
               alt="Mockup do Kit de Festas Lucrativas mostrando exemplos de moldes" 
               className="w-full max-w-xs md:max-w-sm rounded-lg shadow-2xl"
               data-testid="img-mockup"

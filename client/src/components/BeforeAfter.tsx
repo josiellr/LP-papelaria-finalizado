@@ -9,7 +9,7 @@ export default function BeforeAfter() {
           
           <div className="w-full rounded-md overflow-hidden shadow-lg">
             <img 
-              src="https://i.ibb.co/WN0rjLPs/antes-e-depois.png" 
+              src="https://i.ibb.co/KzmVBhMy/antes-e-depois.webp" 
               alt="Antes e Depois - Transformação com Kit de Festas Lucrativas" 
               className="w-full h-auto object-contain"
               data-testid="img-before-after"
