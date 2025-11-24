@@ -22,8 +22,8 @@ export default function LandingPage() {
       <HowItWorks />
       <IdealFor />
       <Guarantee />
-      <Pricing />
       <Testimonials />
+      <Pricing />
       <FAQ />
       <FinalCTA />
       <Footer />
