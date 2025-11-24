@@ -27,8 +27,8 @@ export default function Hero() {
             GERE DE R$ 1.000 A R$ 2.000 TODOS OS MESES MONTANDO CAIXAS PERSONALIZADAS NA MESA DA SUA COZINHA.
           </h1>
           
-          <p className="text-base md:text-lg lg:text-xl mb-8 leading-relaxed max-w-3xl mx-auto">
-            Pare de quebrar a cabeça procurando arquivos soltos na internet e criando do zero. Tenha acesso imediato a 1.137 Temas Prontos, mais de 25 Moldes Validados e 237 Fontes Exclusivas. É só baixar, editar no Canva e vender, mesmo sem experiência.
+          <p className="text-lg md:text-xl lg:text-2xl mb-8 leading-relaxed max-w-3xl mx-auto">
+            Pare de quebrar a cabeça procurando arquivos soltos na internet e criando do zero. Tenha acesso imediato a <span className="text-accent font-bold">1.137 Temas Prontos</span>, mais de <span className="text-accent font-bold">25 Moldes Validados</span> e <span className="text-accent font-bold">237 Fontes Exclusivas</span>. É só baixar, editar no Canva e vender, mesmo sem experiência.
           </p>
           
           <div className="mb-8 flex justify-center">
