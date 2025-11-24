@@ -1,5 +1,6 @@
 import BlackFridayBanner from "@/components/BlackFridayBanner";
 import Hero from "@/components/Hero";
+import BeforeAfter from "@/components/BeforeAfter";
 import WhatYouGet from "@/components/WhatYouGet";
 import HowItWorks from "@/components/HowItWorks";
 import IdealFor from "@/components/IdealFor";
@@ -17,6 +18,7 @@ export default function LandingPage() {
     <div className="min-h-screen">
       <BlackFridayBanner />
       <Hero />
+      <BeforeAfter />
       <WhatYouGet />
       <HowItWorks />
       <IdealFor />
