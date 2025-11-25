@@ -15,13 +15,16 @@ export default function WhatYouGet() {
   ];
 
   const themeTemplates = [
-    // Placeholder - usuário enviará as imagens reais depois
-    "https://via.placeholder.com/1200x720/ff69b4/ffffff?text=Tema+1",
-    "https://via.placeholder.com/1200x720/ffd700/ffffff?text=Tema+2",
-    "https://via.placeholder.com/1200x720/ff69b4/ffffff?text=Tema+3",
-    "https://via.placeholder.com/1200x720/ffd700/ffffff?text=Tema+4",
-    "https://via.placeholder.com/1200x720/ff69b4/ffffff?text=Tema+5",
-    "https://via.placeholder.com/1200x720/ffd700/ffffff?text=Tema+6",
+    "",  // Card 1 - Adicione o link da imagem aqui (1200x720)
+    "",  // Card 2 - Adicione o link da imagem aqui (1200x720)
+    "",  // Card 3 - Adicione o link da imagem aqui (1200x720)
+    "",  // Card 4 - Adicione o link da imagem aqui (1200x720)
+    "",  // Card 5 - Adicione o link da imagem aqui (1200x720)
+    "",  // Card 6 - Adicione o link da imagem aqui (1200x720)
+    "",  // Card 7 - Adicione o link da imagem aqui (1200x720)
+    "",  // Card 8 - Adicione o link da imagem aqui (1200x720)
+    "",  // Card 9 - Adicione o link da imagem aqui (1200x720)
+    "",  // Card 10 - Adicione o link da imagem aqui (1200x720)
   ];
 
   return (
@@ -124,12 +127,18 @@ export default function WhatYouGet() {
                       className="flex-shrink-0 w-80 md:w-96 lg:w-[500px] aspect-[1200/720] rounded-md bg-muted overflow-hidden"
                       data-testid={`scroll-theme-${index}`}
                     >
-                      <img
-                        src={img}
-                        alt={`Tema pronto ${index + 1}`}
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                      />
+                      {img ? (
+                        <img
+                          src={img}
+                          alt={`Tema pronto ${index + 1}`}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-muted-foreground bg-card border border-border">
+                          <span className="text-sm md:text-base font-medium">Tema {index + 1}</span>
+                        </div>
+                      )}
                     </div>
                   ))}
                   {themeTemplates.map((img, index) => (
@@ -138,12 +147,18 @@ export default function WhatYouGet() {
                       className="flex-shrink-0 w-80 md:w-96 lg:w-[500px] aspect-[1200/720] rounded-md bg-muted overflow-hidden"
                       data-testid={`scroll-theme-duplicate-${index}`}
                     >
-                      <img
-                        src={img}
-                        alt={`Tema pronto ${index + 1}`}
-                        className="w-full h-full object-cover"
-                        loading="lazy"
-                      />
+                      {img ? (
+                        <img
+                          src={img}
+                          alt={`Tema pronto ${index + 1}`}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      ) : (
+                        <div className="w-full h-full flex items-center justify-center text-muted-foreground bg-card border border-border">
+                          <span className="text-sm md:text-base font-medium">Tema {index + 1}</span>
+                        </div>
+                      )}
                     </div>
                   ))}
                 </div>
