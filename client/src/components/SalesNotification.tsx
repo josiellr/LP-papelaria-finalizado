@@ -60,8 +60,8 @@ const locations = [
 ];
 
 const packages = [
-  "Pacote Básico (R$10)",
-  "Pacote Premium (R$27)"
+  "Pacote Básico (R$4,99)",
+  "Pacote Premium (R$10)"
 ];
 
 const timeOptions = [
@@ -86,7 +86,7 @@ const generateRandomSale = (): Sale => {
   return {
     name: femaleNames[Math.floor(Math.random() * femaleNames.length)],
     location: locations[Math.floor(Math.random() * locations.length)],
-    package: isPremium ? "Pacote Premium (R$27)" : "Pacote Básico (R$10)",
+    package: isPremium ? "Pacote Premium (R$10)" : "Pacote Básico (R$4,99)",
     timeAgo: timeOptions[Math.floor(Math.random() * timeOptions.length)]
   };
 };
