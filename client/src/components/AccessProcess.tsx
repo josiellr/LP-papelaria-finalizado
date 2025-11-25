@@ -60,7 +60,7 @@ export default function AccessProcess() {
 
           <div className="rounded-lg overflow-hidden shadow-2xl border">
             <img
-              src="https://i.ibb.co/YDPtgdF/area-membros.png"
+              src="https://i.ibb.co/hFwcjs3K/area-de-members.webp"
               alt="Área de Membros - Plataforma de acesso aos kits"
               className="w-full h-auto"
               data-testid="img-member-area"
