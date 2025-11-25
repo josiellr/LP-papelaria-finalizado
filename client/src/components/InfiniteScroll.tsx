@@ -1,16 +1,28 @@
+import scroll1 from "@assets/scroll-1.png";
+import scroll2 from "@assets/scroll-2.png";
+import scroll3 from "@assets/scroll-3.png";
+import scroll6 from "@assets/scroll-6.png";
+import scroll7 from "@assets/scroll-7.png";
+import scroll8 from "@assets/scroll-8.png";
+import scroll9 from "@assets/scroll-9.png";
+import scroll10 from "@assets/scroll-10.png";
+import scroll11 from "@assets/scroll-11.png";
+import scroll12 from "@assets/scroll-12.png";
+import scroll13 from "@assets/scroll-13.png";
+
 const imageLinks = [
-  "https://i.ibb.co/PbkT1TR/1-3.webp",
-  "https://i.ibb.co/7JCHFc1H/4-2.webp",
-  "https://i.ibb.co/Q3HxZBsn/7.webp",
-  "https://i.ibb.co/TzRLsvg/2-3.webp",
-  "https://i.ibb.co/zh85Yxn3/3-3.webp",
-  "https://i.ibb.co/tMHZ4nQq/5.webp",
-  "https://i.ibb.co/Kcqz0DTW/6.webp",
-  "https://i.ibb.co/fd43FDfP/8.webp",
-  "https://i.ibb.co/gZRc00df/9.webp",
+  scroll1,
+  scroll2,
+  scroll3,
+  scroll6,
+  scroll7,
+  scroll8,
+  scroll9,
   "https://i.ibb.co/rGh3cd5S/1.webp",
-  "https://i.ibb.co/hFM8k9kD/mockup-1080-X-720-convites.webp",
-  "https://i.ibb.co/R4pDPCKq/10.webp",
+  scroll10,
+  scroll11,
+  scroll12,
+  scroll13,
 ];
 
 export default function InfiniteScroll() {
@@ -43,18 +55,12 @@ export default function InfiniteScroll() {
                 className="flex-shrink-0 w-60 md:w-80 lg:w-96 aspect-[3/2] rounded-md bg-muted"
                 data-testid={`scroll-image-${index}`}
               >
-                {imgLink ? (
-                  <img
-                    src={imgLink}
-                    alt={`Exemplo de kit de festas ${index + 1}`}
-                    className="w-full h-full object-cover rounded-md"
-                    loading="lazy"
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                    <span className="text-sm md:text-base">Imagem {index + 1}</span>
-                  </div>
-                )}
+                <img
+                  src={imgLink}
+                  alt={`Exemplo de kit de festas ${index + 1}`}
+                  className="w-full h-full object-cover rounded-md"
+                  loading="lazy"
+                />
               </div>
             ))}
             {imageLinks.map((imgLink, index) => (
@@ -63,18 +69,12 @@ export default function InfiniteScroll() {
                 className="flex-shrink-0 w-60 md:w-80 lg:w-96 aspect-[3/2] rounded-md bg-muted"
                 data-testid={`scroll-image-duplicate-${index}`}
               >
-                {imgLink ? (
-                  <img
-                    src={imgLink}
-                    alt={`Exemplo de kit de festas ${index + 1}`}
-                    className="w-full h-full object-cover rounded-md"
-                    loading="lazy"
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center text-muted-foreground">
-                    <span className="text-sm md:text-base">Imagem {index + 1}</span>
-                  </div>
-                )}
+                <img
+                  src={imgLink}
+                  alt={`Exemplo de kit de festas ${index + 1}`}
+                  className="w-full h-full object-cover rounded-md"
+                  loading="lazy"
+                />
               </div>
             ))}
           </div>
