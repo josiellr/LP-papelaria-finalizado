@@ -9,7 +9,7 @@ export default function WhatYouGet() {
     "",  // Card 7 - Adicione o link da imagem aqui
     "",  // Card 8 - Adicione o link da imagem aqui
     "",  // Card 9 - Adicione o link da imagem aqui
-    "",  // Card 10 - Adicione o link da imagem aqui
+    "https://i.ibb.co/rGh3cd5S/1.webp",  // Card 10
     "",  // Card 11 - Adicione o link da imagem aqui
     "",  // Card 12 - Adicione o link da imagem aqui
   ];
