@@ -59,11 +59,6 @@ const locations = [
   "Aracaju, SE"
 ];
 
-const packages = [
-  "Pacote Básico (R$4,99)",
-  "Pacote Premium (R$10)"
-];
-
 const timeOptions = [
   "há 2 minutos",
   "há 5 minutos",
@@ -133,7 +128,7 @@ export default function SalesNotification() {
           </div>
           <div className="flex-1 min-w-0">
             <p className="text-sm font-semibold text-foreground mb-1">
-              Nova compra realizada! 🎉
+              Nova compra realizada!
             </p>
             <p className="text-sm text-muted-foreground">
               <span className="font-medium text-foreground">{currentSale.name}</span> de{" "}

@@ -1,7 +1,6 @@
-import { Star } from "lucide-react";
+import { Star, Zap, Palette, Sparkles, Check, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@assets/generated_images/Festive_party_celebration_hero_549b0c91.png";
-import mockupImage from "@assets/mockup-exemplo.png";
 
 export default function Hero() {
   const scrollToOffers = () => {
@@ -60,23 +59,23 @@ export default function Hero() {
           
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 max-w-3xl mx-auto text-left">
             <div className="flex items-center gap-2 text-white/90 text-sm md:text-base justify-start" data-testid="feature-fast-editing">
-              <span className="text-xl">⚡</span>
+              <Zap className="w-5 h-5 text-accent" />
               <span>Edição rápida e fácil</span>
             </div>
             <div className="flex items-center gap-2 text-white/90 text-sm md:text-base justify-start" data-testid="feature-canva">
-              <span className="text-xl">🎨</span>
+              <Palette className="w-5 h-5 text-accent" />
               <span>Moldes para o Canva</span>
             </div>
             <div className="flex items-center gap-2 text-white/90 text-sm md:text-base justify-start" data-testid="feature-quality">
-              <span className="text-xl">✨</span>
+              <Sparkles className="w-5 h-5 text-accent" />
               <span>Imagens de alta qualidade</span>
             </div>
             <div className="flex items-center gap-2 text-white/90 text-sm md:text-base justify-start" data-testid="feature-no-experience">
-              <span className="text-xl">✅</span>
+              <Check className="w-5 h-5 text-accent" />
               <span>Não precisa saber designer</span>
             </div>
             <div className="flex items-center gap-2 text-white/90 text-sm md:text-base md:col-span-2 lg:col-span-1 justify-start" data-testid="feature-trial">
-              <span className="text-xl">🛡️</span>
+              <Shield className="w-5 h-5 text-accent" />
               <span>Teste sem compromisso por 7 dias</span>
             </div>
           </div>
