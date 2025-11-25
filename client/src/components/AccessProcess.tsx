@@ -27,13 +27,22 @@ export default function AccessProcess() {
     <section className="py-16 md:py-24 bg-gradient-to-b from-background to-card">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12 md:mb-16">
+          <div className="text-center mb-8 md:mb-12">
             <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl mb-4 leading-tight">
               COMO VOU RECEBER MEU ACESSO?
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground">
               O processo é automático e leva menos de 2 minutos:
             </p>
+          </div>
+
+          <div className="rounded-lg overflow-hidden shadow-2xl border mb-12 md:mb-16">
+            <img
+              src="https://i.ibb.co/hFwcjs3K/area-de-members.webp"
+              alt="Área de Membros - Plataforma de acesso aos kits"
+              className="w-full h-auto"
+              data-testid="img-member-area"
+            />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
@@ -56,15 +65,6 @@ export default function AccessProcess() {
                 </CardContent>
               </Card>
             ))}
-          </div>
-
-          <div className="rounded-lg overflow-hidden shadow-2xl border">
-            <img
-              src="https://i.ibb.co/hFwcjs3K/area-de-members.webp"
-              alt="Área de Membros - Plataforma de acesso aos kits"
-              className="w-full h-auto"
-              data-testid="img-member-area"
-            />
           </div>
         </div>
       </div>
