@@ -1,17 +1,17 @@
 export default function WhatYouGet() {
   const boxTemplates = [
-    "",  // Card 1 - Adicione o link da imagem aqui
-    "",  // Card 2 - Adicione o link da imagem aqui
-    "",  // Card 3 - Adicione o link da imagem aqui
-    "",  // Card 4 - Adicione o link da imagem aqui
-    "",  // Card 5 - Adicione o link da imagem aqui
-    "",  // Card 6 - Adicione o link da imagem aqui
-    "",  // Card 7 - Adicione o link da imagem aqui
-    "",  // Card 8 - Adicione o link da imagem aqui
-    "",  // Card 9 - Adicione o link da imagem aqui
+    "https://i.ibb.co/Kjg2K6V2/2.webp",  // Card 1
+    "https://i.ibb.co/zhNf00kJ/3.webp",  // Card 2
+    "https://i.ibb.co/PzJZ1ZW1/4.webp",  // Card 3
+    "https://i.ibb.co/6cZnQtZj/5.webp",  // Card 4
+    "https://i.ibb.co/kV1Qp7CZ/6.webp",  // Card 5
+    "https://i.ibb.co/KxKfckJ2/7.webp",  // Card 6
+    "https://i.ibb.co/HLgcxTSF/8.webp",  // Card 7
+    "https://i.ibb.co/ksgW4VWz/9.webp",  // Card 8
+    "https://i.ibb.co/r2ytBHSK/10.webp", // Card 9
     "https://i.ibb.co/rGh3cd5S/1.webp",  // Card 10
-    "",  // Card 11 - Adicione o link da imagem aqui
-    "",  // Card 12 - Adicione o link da imagem aqui
+    "https://i.ibb.co/wZssCf3B/11.webp", // Card 11
+    "https://i.ibb.co/Q3CkwcC5/12.webp", // Card 12
   ];
 
   const themeTemplates = [
