@@ -1,12 +1,17 @@
 export default function WhatYouGet() {
   const boxTemplates = [
-    // Placeholder - usuário enviará as imagens reais depois
-    "https://via.placeholder.com/512x800/ff69b4/ffffff?text=Molde+1",
-    "https://via.placeholder.com/512x800/ffd700/ffffff?text=Molde+2",
-    "https://via.placeholder.com/512x800/ff69b4/ffffff?text=Molde+3",
-    "https://via.placeholder.com/512x800/ffd700/ffffff?text=Molde+4",
-    "https://via.placeholder.com/512x800/ff69b4/ffffff?text=Molde+5",
-    "https://via.placeholder.com/512x800/ffd700/ffffff?text=Molde+6",
+    "",  // Card 1 - Adicione o link da imagem aqui
+    "",  // Card 2 - Adicione o link da imagem aqui
+    "",  // Card 3 - Adicione o link da imagem aqui
+    "",  // Card 4 - Adicione o link da imagem aqui
+    "",  // Card 5 - Adicione o link da imagem aqui
+    "",  // Card 6 - Adicione o link da imagem aqui
+    "",  // Card 7 - Adicione o link da imagem aqui
+    "",  // Card 8 - Adicione o link da imagem aqui
+    "",  // Card 9 - Adicione o link da imagem aqui
+    "",  // Card 10 - Adicione o link da imagem aqui
+    "",  // Card 11 - Adicione o link da imagem aqui
+    "",  // Card 12 - Adicione o link da imagem aqui
   ];
 
   const themeTemplates = [
