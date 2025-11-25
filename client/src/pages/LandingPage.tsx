@@ -6,6 +6,7 @@ import HowItWorks from "@/components/HowItWorks";
 import IdealFor from "@/components/IdealFor";
 import Guarantee from "@/components/Guarantee";
 import Pricing from "@/components/Pricing";
+import AccessProcess from "@/components/AccessProcess";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
@@ -24,6 +25,7 @@ export default function LandingPage() {
       <Guarantee />
       <Testimonials />
       <Pricing />
+      <AccessProcess />
       <FAQ />
       <FinalCTA />
       <Footer />
