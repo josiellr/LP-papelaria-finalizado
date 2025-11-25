@@ -8,10 +8,9 @@ const imageLinks = [
   "https://i.ibb.co/Kcqz0DTW/6.webp",
   "https://i.ibb.co/fd43FDfP/8.webp",
   "https://i.ibb.co/gZRc00df/9.webp",
+  "https://i.ibb.co/rGh3cd5S/1.webp",
   "https://i.ibb.co/hFM8k9kD/mockup-1080-X-720-convites.webp",
   "https://i.ibb.co/R4pDPCKq/10.webp",
-  "https://i.ibb.co/S7NyRgQs/11-1.webp",
-  "https://i.ibb.co/zVL7k9DB/12-1.webp",
 ];
 
 export default function InfiniteScroll() {
