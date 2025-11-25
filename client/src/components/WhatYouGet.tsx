@@ -15,16 +15,16 @@ export default function WhatYouGet() {
   ];
 
   const themeTemplates = [
-    "",  // Card 1 - Adicione o link da imagem aqui (1200x720)
-    "",  // Card 2 - Adicione o link da imagem aqui (1200x720)
-    "",  // Card 3 - Adicione o link da imagem aqui (1200x720)
-    "",  // Card 4 - Adicione o link da imagem aqui (1200x720)
-    "",  // Card 5 - Adicione o link da imagem aqui (1200x720)
-    "",  // Card 6 - Adicione o link da imagem aqui (1200x720)
-    "",  // Card 7 - Adicione o link da imagem aqui (1200x720)
-    "",  // Card 8 - Adicione o link da imagem aqui (1200x720)
-    "",  // Card 9 - Adicione o link da imagem aqui (1200x720)
-    "",  // Card 10 - Adicione o link da imagem aqui (1200x720)
+    "https://i.ibb.co/LFJV5gx/1-1.webp",     // Card 1
+    "https://i.ibb.co/cSL3xsqN/1-2.webp",    // Card 2
+    "https://i.ibb.co/h12w3t19/1-3.webp",    // Card 3
+    "https://i.ibb.co/wFCxj31Z/1-4.webp",    // Card 4
+    "https://i.ibb.co/Q7CH1D8C/1-5.webp",    // Card 5
+    "https://i.ibb.co/j94HywJ0/1-6.webp",    // Card 6
+    "https://i.ibb.co/2YcQLNXG/1-7.webp",    // Card 7
+    "https://i.ibb.co/DHgc02CY/1-8.webp",    // Card 8
+    "https://i.ibb.co/TDhH7Wy7/1-9.webp",    // Card 9
+    "https://i.ibb.co/sJQvWYjb/1-10.webp",   // Card 10
   ];
 
   return (
