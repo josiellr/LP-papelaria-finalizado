@@ -15,7 +15,7 @@ const pricingTiers = [
     deliverables: [
       { text: "Acesso por 3 meses", included: true },
       { text: "+25 moldes limpos para o Canva", included: true },
-      { text: "+1137 temas de festas", included: true },
+      { text: "+1137 temas de festas (Personagens e Fundos Digitais)", included: true },
       { text: "+237 fontes personalizadas", included: true },
       { text: "Atualizações por 3 meses", included: true },
       { text: "Garantia de 15 dias", included: true },
@@ -33,7 +33,7 @@ const pricingTiers = [
     deliverables: [
       { text: "Acesso vitalício", included: true },
       { text: "+25 moldes limpos para o Canva", included: true },
-      { text: "+1137 temas de festas", included: true },
+      { text: "+1137 temas de festas (Personagens e Fundos Digitais)", included: true },
       { text: "+237 fontes personalizadas", included: true },
       { text: "Atualizações por 1 ano", included: true },
       { text: "Garantia de 15 dias", included: true },
