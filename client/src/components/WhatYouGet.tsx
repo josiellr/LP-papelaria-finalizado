@@ -191,6 +191,35 @@ export default function WhatYouGet() {
               <div className="absolute top-0 left-0 h-full w-24 md:w-32 bg-gradient-to-r from-background to-transparent pointer-events-none z-10" />
               <div className="absolute top-0 right-0 h-full w-24 md:w-32 bg-gradient-to-l from-background to-transparent pointer-events-none z-10" />
             </div>
+            
+            <div className="mt-8 text-center">
+              <p className="text-sm text-muted-foreground mb-4">Temas de festas incluídos:</p>
+              <div className="flex flex-wrap justify-center gap-2">
+                {[
+                  "Frozen", "Princesas Disney", "Mickey e Minnie", "Patrulha Canina",
+                  "Homem-Aranha", "Vingadores", "Moana", "Encanto", "Sonic",
+                  "Super Mario", "Barbie", "LOL Surprise", "Unicórnio", "Safari",
+                  "Fazendinha", "Galinha Pintadinha", "Cocomelon", "Baby Shark",
+                  "Mundo Bita", "Peppa Pig", "PJ Masks", "Ladybug", "Naruto",
+                  "Dragon Ball", "Futebol", "Astronauta", "Dinossauros", "Sereia",
+                  "Fundo do Mar", "Jardim Encantado", "Bosque", "Circo",
+                  "Carrossel", "Bailarina", "Princesa", "Super-Heróis",
+                  "Hot Wheels", "Carros Disney", "Toy Story", "Stitch",
+                  "Turma da Mônica", "Chá de Bebê", "Revelação", "Batizado"
+                ].map((item, index) => (
+                  <span
+                    key={index}
+                    className="inline-block px-3 py-1 text-xs bg-accent/20 text-accent-foreground rounded-full"
+                    data-testid={`badge-theme-${index}`}
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+              <p className="mt-6 text-base md:text-lg font-semibold text-primary">
+                E muito mais! São mais de 1.137 temas que não caberiam todos aqui.
+              </p>
+            </div>
           </div>
         </div>
       </div>
