@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { TrendingUp, CheckCircle, X, ArrowRight, ArrowDown, Flame } from "lucide-react";
+import { TrendingUp, CheckCircle, X, ArrowRight, ArrowDown, Flame, MessageCircle } from "lucide-react";
 import { useEffect, useState } from "react";
 import { format } from "date-fns";
 import { ptBR } from "date-fns/locale";
@@ -19,7 +19,8 @@ const pricingTiers = [
       { text: "+237 fontes personalizadas", included: true },
       { text: "Atualizações por 3 meses", included: true },
       { text: "Garantia de 15 dias", included: true },
-      { text: "Compra Segura pela Kiwify", included: true }
+      { text: "Compra Segura pela Kiwify", included: true },
+      { text: "Suporte via WhatsApp", included: true }
     ],
     buttonText: "COMEÇAR AGORA - R$10",
     isPopular: false,
@@ -37,7 +38,8 @@ const pricingTiers = [
       { text: "+237 fontes personalizadas", included: true },
       { text: "Atualizações por 1 ano", included: true },
       { text: "Garantia de 15 dias", included: true },
-      { text: "Compra Segura pela Kiwify", included: true }
+      { text: "Compra Segura pela Kiwify", included: true },
+      { text: "Suporte via WhatsApp", included: true }
     ],
     buttonText: "QUERO O PLANO PREMIUM - R$17",
     isPopular: true,
@@ -208,6 +210,17 @@ export default function Pricing() {
                   <p className="text-xs text-center text-muted-foreground">
                     Compra segura com certificados de segurança.
                   </p>
+                  
+                  <a 
+                    href="https://wa.me/5574999227606?text=Olá! Tenho uma dúvida sobre o Kit de Festas Lucrativas."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 text-sm text-green-600 dark:text-green-500 hover:underline"
+                    data-testid={`link-whatsapp-${index}`}
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                    Dúvidas? Fale conosco no WhatsApp
+                  </a>
                 </CardContent>
               </Card>
             ))}
