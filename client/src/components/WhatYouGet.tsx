@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+
 export default function WhatYouGet() {
   const boxTemplates = [
     "https://i.ibb.co/Kjg2K6V2/2.webp",  // Card 1
@@ -27,8 +29,12 @@ export default function WhatYouGet() {
     "https://i.ibb.co/sJQvWYjb/1-10.webp",   // Card 10
   ];
 
+  const scrollToOffers = () => {
+    document.getElementById('offers')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-background via-primary/5 to-accent/10">
+    <section id="what-you-get" className="py-16 md:py-24 bg-gradient-to-br from-background via-primary/5 to-accent/10">
       <style>
         {`
           @keyframes scroll-left {
@@ -220,6 +226,17 @@ export default function WhatYouGet() {
                 E muito mais! São mais de 1.137 temas que não caberiam todos aqui.
               </p>
             </div>
+          </div>
+          
+          <div className="text-center mt-12">
+            <Button 
+              onClick={scrollToOffers}
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground font-heading font-bold text-base md:text-lg px-8 md:px-12 py-6 md:py-7 rounded-md shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
+              data-testid="button-start-profit"
+            >
+              QUERO COMEÇAR A LUCRAR AGORA
+            </Button>
           </div>
         </div>
       </div>

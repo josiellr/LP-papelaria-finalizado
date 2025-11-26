@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import heroImage from "@assets/generated_images/Festive_party_celebration_hero_549b0c91.png";
 
 export default function Hero() {
-  const scrollToOffers = () => {
-    document.getElementById('offers')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToWhatYouGet = () => {
+    document.getElementById('what-you-get')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -49,12 +49,12 @@ export default function Hero() {
           </div>
           
           <Button 
-            onClick={scrollToOffers}
+            onClick={scrollToWhatYouGet}
             size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground font-heading font-bold text-base md:text-lg px-8 md:px-12 py-6 md:py-7 rounded-md shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105"
             data-testid="button-hero-cta"
           >
-            QUERO COMEÇAR A LUCRAR AGORA
+            O QUE VOU RECEBER?
           </Button>
           
           <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 max-w-3xl mx-auto text-left">
