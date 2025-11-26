@@ -18,6 +18,14 @@ export default function Hero() {
       
       <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8 py-16 md:py-24">
         <div className="max-w-4xl mx-auto text-center text-white">
+          <div className="mb-4">
+            <img 
+              src="https://i.ibb.co/TBFffdbJ/logo-kiwify-720-XX128.png" 
+              alt="Logo Kit Festas Lucrativas" 
+              className="mx-auto h-16 md:h-20 lg:h-24 object-contain"
+              data-testid="img-logo-hero"
+            />
+          </div>
           <div className="inline-block mb-4">
             <p className="text-lg md:text-xl lg:text-2xl font-bold tracking-wide uppercase">O KIT FESTAS LUCRATIVAS</p>
           </div>
