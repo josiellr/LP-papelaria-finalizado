@@ -23,7 +23,7 @@ const pricingTiers = [
     ],
     buttonText: "COMEÇAR AGORA - R$4,99",
     isPopular: false,
-    checkoutLink: "https://pay.kiwify.com.br/IcKLLxb"
+    checkoutLink: "https://pay.kiwify.com.br/6P8i9Ja"
   },
   {
     name: "PACOTE PREMIUM",
@@ -41,7 +41,7 @@ const pricingTiers = [
     ],
     buttonText: "QUERO O PLANO PREMIUM - R$10",
     isPopular: true,
-    checkoutLink: "https://pay.kiwify.com.br/t8I0sae",
+    checkoutLink: "https://pay.kiwify.com.br/1VDREq9",
     socialProof: "Comprado por mais de 743 pessoas nos últimos dias"
   }
 ];
