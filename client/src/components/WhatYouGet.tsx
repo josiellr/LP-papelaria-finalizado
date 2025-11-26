@@ -110,6 +110,30 @@ export default function WhatYouGet() {
               <div className="absolute top-0 left-0 h-full w-24 md:w-32 bg-gradient-to-r from-background to-transparent pointer-events-none z-10" />
               <div className="absolute top-0 right-0 h-full w-24 md:w-32 bg-gradient-to-l from-background to-transparent pointer-events-none z-10" />
             </div>
+            
+            <div className="mt-8 text-center">
+              <p className="text-sm text-muted-foreground mb-4">Tipos de moldes incluídos:</p>
+              <div className="flex flex-wrap justify-center gap-2">
+                {[
+                  "Bandeirola Modelo 1", "Bandeirola Modelo 2", "Flâmula",
+                  "Sacolinha Modelo 1", "Sacolinha Modelo 2", "Caixa Bala",
+                  "Caixa Cone", "Caixa Cubo", "Caixa Hexagonal", "Caixa Meia Bala",
+                  "Caixa Milk", "Porta Bis", "Caixa Pirâmide", "Caixa Sushi",
+                  "Forminhas para Doces", "Rótulo Cofrinho", "Rótulo Garrafinha",
+                  "Rótulo Lata de Leite", "Adesivo Latinha Mint to Be",
+                  "Rótulo Mini Pringles", "Rótulo Tubete", "Chapéu de Festa",
+                  "Plaquinha Divertida", "Porta Bombom", "Cachepô", "E muito mais..."
+                ].map((item, index) => (
+                  <span
+                    key={index}
+                    className="inline-block px-3 py-1 text-xs bg-primary/10 text-primary rounded-full"
+                    data-testid={`badge-mold-${index}`}
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Seção 2: Temas e Fontes */}
