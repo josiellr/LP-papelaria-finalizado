@@ -207,9 +207,14 @@ export default function Pricing() {
                     <a href={tier.checkoutLink}>{tier.buttonText}</a>
                   </Button>
                   
-                  <p className="text-xs text-center text-muted-foreground">
-                    🔒 Compra 100% Segura. Aproveite agora, essa oferta pode não aparecer novamente.
-                  </p>
+                  <div className="text-center mt-2">
+                    <p className="text-sm font-semibold text-primary">
+                      🔒 Compra 100% Segura
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      Aproveite agora, essa oferta pode não aparecer novamente.
+                    </p>
+                  </div>
                 </CardContent>
               </Card>
             ))}
