@@ -13,7 +13,7 @@ export default function FinalCTA() {
           <div className="mb-8">
             <div className="inline-flex items-center gap-2 bg-card border-2 border-primary/20 px-6 py-3 rounded-md mb-6">
               <CheckCircle className="w-5 h-5 text-primary" />
-              <span className="font-semibold">Compra segura com certificados de segurança.</span>
+              <span className="font-semibold">🔒 Compra 100% Segura. Aproveite agora, essa oferta pode não aparecer novamente.</span>
             </div>
           </div>
           

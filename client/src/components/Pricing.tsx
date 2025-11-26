@@ -208,7 +208,7 @@ export default function Pricing() {
                   </Button>
                   
                   <p className="text-xs text-center text-muted-foreground">
-                    Compra segura com certificados de segurança.
+                    🔒 Compra 100% Segura. Aproveite agora, essa oferta pode não aparecer novamente.
                   </p>
                 </CardContent>
               </Card>
