@@ -223,7 +223,7 @@ export default function WhatYouGet() {
                 ))}
               </div>
               <p className="mt-6 text-base md:text-lg font-semibold text-primary">
-                E muito mais! São mais de 1.137 temas que não caberiam todos aqui.
+                E muito mais! São mais 1.137 temas da letra A até Z que não caberiam todos aqui.
               </p>
             </div>
           </div>
