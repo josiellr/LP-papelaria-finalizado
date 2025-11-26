@@ -9,9 +9,9 @@ import { ptBR } from "date-fns/locale";
 const pricingTiers = [
   {
     name: "PACOTE BÁSICO",
-    price: "R$4,99",
+    price: "R$10",
     originalTotal: "R$108,90",
-    savings: "R$104",
+    savings: "R$98,90",
     deliverables: [
       { text: "Acesso por 3 meses", included: true },
       { text: "+25 moldes limpos para o Canva", included: true },
@@ -21,15 +21,15 @@ const pricingTiers = [
       { text: "Garantia de 15 dias", included: true },
       { text: "Compra Segura pela Kiwify", included: true }
     ],
-    buttonText: "COMEÇAR AGORA - R$4,99",
+    buttonText: "COMEÇAR AGORA - R$10",
     isPopular: false,
     checkoutLink: "https://pay.kiwify.com.br/6P8i9Ja"
   },
   {
     name: "PACOTE PREMIUM",
-    price: "R$10",
+    price: "R$17",
     originalTotal: "R$171,90",
-    savings: "R$161,90",
+    savings: "R$154,90",
     deliverables: [
       { text: "Acesso vitalício", included: true },
       { text: "+25 moldes limpos para o Canva", included: true },
@@ -39,7 +39,7 @@ const pricingTiers = [
       { text: "Garantia de 15 dias", included: true },
       { text: "Compra Segura pela Kiwify", included: true }
     ],
-    buttonText: "QUERO O PLANO PREMIUM - R$10",
+    buttonText: "QUERO O PLANO PREMIUM - R$17",
     isPopular: true,
     checkoutLink: "https://pay.kiwify.com.br/1VDREq9",
     socialProof: "Comprado por mais de 743 pessoas nos últimos dias"
