@@ -96,8 +96,8 @@ export default function Pricing() {
           <div className="text-center mb-8">
             <div className="inline-flex flex-col items-center gap-2 bg-destructive text-destructive-foreground px-6 py-3 rounded-md font-heading font-bold text-xs md:text-sm shadow-lg">
               <div className="flex items-center gap-2">
-                <Flame className="w-4 h-4 md:w-5 md:h-5 flex-shrink-0" />
-                <span className="leading-tight">OFERTA ESPECIAL DE BLACK FRIDAY<br />APLICADA SOMENTE ATÉ HOJE {currentDay}</span>
+                <span className="text-lg md:text-xl flex-shrink-0">🎅</span>
+                <span className="leading-tight">OFERTA ESPECIAL DE NATAL<br />APLICADA SOMENTE ATÉ HOJE {currentDay}</span>
               </div>
               {timeRemaining && (
                 <div className="text-lg md:text-xl font-mono font-bold">
